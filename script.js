@@ -168,6 +168,12 @@ showQuestion();
 
 nextBtn.addEventListener("click", () => {
     let optionSelected = document.querySelector('input[name="opt"]:checked')
+    allLabels.forEach(l => {
+        l.style.backgroundColor = "";
+        l.style.color = "black";
+
+    });
+
 
     if (optionSelected == null) {
         alert("Please select one option")
@@ -207,6 +213,12 @@ let backBtn = document.getElementById("backBtn")
 
 backBtn.addEventListener("click", back)
 function back() {
+    allInputss.forEach(inpt => {
+        inpt.addEventListener("click", () => {
+            checkAnswer()
+        })
+    })
+
     if (currentQuesNo === 0) {
         return
     } else if (currentQuesNo > 0) {
@@ -215,28 +227,28 @@ function back() {
     }
 }
 
-let checkBtn = document.getElementById("checkKar");
+// let checkBtn = document.getElementById("checkKar");
 
-checkBtn.addEventListener("click", () => {
-    let correctAns = quizQuestions[currentQuesNo].correct
-    let selectedOpt = document.querySelector('input[name="opt"]:checked')
+// checkBtn.addEventListener("click", () => {
+//     let correctAns = quizQuestions[currentQuesNo].correct
+//     let selectedOpt = document.querySelector('input[name="opt"]:checked')
 
-    console.log(correctAns);
-    console.log(selectedOpt.id);
-    let labelSel = document.querySelector(`label[for ="${selectedOpt.id}"]`)
-    let labelCrct = document.querySelector(`label[for ="${correctAns}"]`)
+//     console.log(correctAns);
+//     console.log(selectedOpt.id);
+//     let labelSel = document.querySelector(`label[for ="${selectedOpt.id}"]`)
+//     let labelCrct = document.querySelector(`label[for ="${correctAns}"]`)
 
-    console.log(labelSel);
-    console.log(labelCrct);
+//     console.log(labelSel);
+//     console.log(labelCrct);
 
-    if (labelSel === labelCrct) {
-        labelSel.style.backgroundColor = "green"
-    } else if (labelSel != labelCrct) {
-        labelSel.style.backgroundColor = "red"
-        labelCrct.style.backgroundColor = "green"
-        labelCrct.style.color = "white"
-    }
-})
+//     if (labelSel === labelCrct) {
+//         labelSel.style.backgroundColor = "green"
+//     } else if (labelSel != labelCrct) {
+//         labelSel.style.backgroundColor = "red"
+//         labelCrct.style.backgroundColor = "green"
+//         labelCrct.style.color = "white"
+//     }
+// })
 
 // function checkKarFun() {
 //     let correctAns = quizQuestions[currentQuesNo].correct
@@ -258,37 +270,62 @@ checkBtn.addEventListener("click", () => {
 let allLabels = document.querySelectorAll(`label[for^="opt"]`)
 let allInputss = document.querySelectorAll('input[name=opt]')
 
-allInputss.forEach(label => {
-    label.addEventListener("click", () => {
-        //   label.style.backgroundColor ="pink"
-        // console.log(e.target);
-
-        let correctAns = quizQuestions[currentQuesNo].correct
-        let selectedOpt = document.querySelector('input[name="opt"]:checked')
-
-
-        let labelSel = document.querySelector(`label[for ="${selectedOpt.id}"]`)
-        let labelCrct = document.querySelector(`label[for ="${correctAns}"]`)
-
-        console.log(correctAns);
-        console.log(labelCrct);
-        console.log(labelSel);
-
-
-        allLabels.forEach(l => l.style.backgroundColor = "");
-
-
-        if (labelSel === labelCrct) {
-            labelSel.style.backgroundColor = "green"
-        } else {
-            labelSel.style.backgroundColor = "red"
-            labelCrct.style.backgroundColor = "green"
-            labelCrct.style.color = "white"
-        }
+allInputss.forEach(inpt => {
+    inpt.addEventListener("click", () => {
+        checkAnswer()
     })
 })
 
+// allInputss.forEach(label => {
+//     label.addEventListener("click", () => {
 
+//         let correctAns = quizQuestions[currentQuesNo].correct
+//         let selectedOpt = document.querySelector('input[name="opt"]:checked')
+
+//         let labelSel = document.querySelector(`label[for ="${selectedOpt.id}"]`)
+//         let labelCrct = document.querySelector(`label[for ="${correctAns}"]`)
+
+//         console.log(correctAns);
+//         console.log(labelSel);
+//         console.log(labelCrct);
+//         console.log(selectedOpt)
+
+//         allLabels.forEach(l => l.style.backgroundColor = "");
+
+//         if (labelSel === labelCrct) {
+//             labelSel.style.backgroundColor = "green"
+//         } else {
+//             labelSel.style.backgroundColor = "red"
+//             labelCrct.style.backgroundColor = "green"
+//             labelCrct.style.color = "white"
+//         }
+//     })
+// })
+
+function checkAnswer() {
+
+    let correctAns = quizQuestions[currentQuesNo].correct
+    let selectedOpt = document.querySelector('input[name="opt"]:checked')
+
+    let labelSel = document.querySelector(`label[for ="${selectedOpt.id}"]`)
+    let labelCrct = document.querySelector(`label[for ="${correctAns}"]`)
+
+    console.log(correctAns);
+    console.log(labelSel);
+    console.log(labelCrct);
+    console.log(selectedOpt)
+
+    allLabels.forEach(l => l.style.backgroundColor = "");
+
+    if (labelSel === labelCrct) {
+        labelSel.style.backgroundColor = "green"
+    } else {
+        labelSel.style.backgroundColor = "red"
+        labelCrct.style.backgroundColor = "green"
+        labelCrct.style.color = "white"
+    }
+
+}
 
 
 
