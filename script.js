@@ -1,37 +1,3 @@
-// const quizQuestions = [
-//     {
-//         question: "Which language runs in a web browser?",
-//         opt1: "Java",
-//         opt2: "C",
-//         opt3: "Python",
-//         opt4: "JavaScript",
-//         correct: "opt4",
-//     },
-//     {
-//         question: "What does CSS stand for?",
-//         opt1: "Central Style Sheets",
-//         opt2: "Cascading Style Sheets",
-//         opt3: "Cascading Simple Sheets",
-//         opt4: "Cars SUVs Sailboats",
-//         correct: "opt2",
-//     },
-//     {
-//         question: "What does HTML stand for?",
-//         opt1: "Hypertext Markup Language",
-//         opt2: "Hypertext Markdown Language",
-//         opt3: "Hyperloop Machine Language",
-//         opt4: "Helicopters Terminals Motorboats Lamborginis",
-//         correct: "opt1",
-//     },
-//     {
-//         question: "What year was JavaScript launched?",
-//         opt1: "1996",
-//         opt2: "1995",
-//         opt3: "1994",
-//         opt4: "none of the above",
-//         correct: "opt2",
-//     },
-// ];
 
 const quizQuestions = [
     {
@@ -117,10 +83,6 @@ const quizQuestions = [
 ];
 
 
-
-
-
-
 let quesNo = document.getElementById("quesNo")
 let quesText = document.getElementById("quesText")
 let option1 = document.getElementById("option1")
@@ -137,15 +99,8 @@ let sec = 10
 
 let countDown = document.querySelector(".timer")
 
-
 function showQuestion() {
-    // checkKarFun()
-    // clearInterval(myInterval)
-
-    // sec =10
-    // countDown.innerHTML = sec
-
-    // myInterval = setInterval(timer, 1000)
+   
 
     if (currentQuesNo >= quizQuestions.length) {
         currentQuesNo = 0;
@@ -174,7 +129,6 @@ nextBtn.addEventListener("click", () => {
 
     });
 
-
     if (optionSelected == null) {
         alert("Please select one option")
     } else {
@@ -197,22 +151,12 @@ nextBtn.addEventListener("click", () => {
     }
 })
 
-// let totalTime = 8
-
-// function timer() {
-//     countDown.innerHTML = sec
-//     sec--;
-//     if (sec <= 0) {
-//         sec =10
-//         clearInterval(myInterval)
-//         currentQuesNo++
-//         showQuestion()
-//     }
-// }
 let backBtn = document.getElementById("backBtn")
 
 backBtn.addEventListener("click", back)
 function back() {
+    allLabels.forEach(l => l.style.backgroundColor = "");
+
     allInputss.forEach(inpt => {
         inpt.addEventListener("click", () => {
             checkAnswer()
@@ -227,46 +171,6 @@ function back() {
     }
 }
 
-// let checkBtn = document.getElementById("checkKar");
-
-// checkBtn.addEventListener("click", () => {
-//     let correctAns = quizQuestions[currentQuesNo].correct
-//     let selectedOpt = document.querySelector('input[name="opt"]:checked')
-
-//     console.log(correctAns);
-//     console.log(selectedOpt.id);
-//     let labelSel = document.querySelector(`label[for ="${selectedOpt.id}"]`)
-//     let labelCrct = document.querySelector(`label[for ="${correctAns}"]`)
-
-//     console.log(labelSel);
-//     console.log(labelCrct);
-
-//     if (labelSel === labelCrct) {
-//         labelSel.style.backgroundColor = "green"
-//     } else if (labelSel != labelCrct) {
-//         labelSel.style.backgroundColor = "red"
-//         labelCrct.style.backgroundColor = "green"
-//         labelCrct.style.color = "white"
-//     }
-// })
-
-// function checkKarFun() {
-//     let correctAns = quizQuestions[currentQuesNo].correct
-//     let selectedOpt = document.querySelector('input[name="opt"]:checked')
-
-//     let labelSel = document.querySelector(`label[for ="${selectedOpt.id}"]`)
-//     let labelCrct = document.querySelector(`label[for ="${correctAns}"]`)
-
-
-//     if (labelSel === labelCrct) {
-//         labelSel.style.backgroundColor = "green"
-//     } else if (labelSel != labelCrct) {
-//         labelSel.style.backgroundColor = "red"
-//         labelCrct.style.backgroundColor = "green"
-//         labelCrct.style.color = "white"
-//     }
-// }
-
 let allLabels = document.querySelectorAll(`label[for^="opt"]`)
 let allInputss = document.querySelectorAll('input[name=opt]')
 
@@ -276,31 +180,6 @@ allInputss.forEach(inpt => {
     })
 })
 
-// allInputss.forEach(label => {
-//     label.addEventListener("click", () => {
-
-//         let correctAns = quizQuestions[currentQuesNo].correct
-//         let selectedOpt = document.querySelector('input[name="opt"]:checked')
-
-//         let labelSel = document.querySelector(`label[for ="${selectedOpt.id}"]`)
-//         let labelCrct = document.querySelector(`label[for ="${correctAns}"]`)
-
-//         console.log(correctAns);
-//         console.log(labelSel);
-//         console.log(labelCrct);
-//         console.log(selectedOpt)
-
-//         allLabels.forEach(l => l.style.backgroundColor = "");
-
-//         if (labelSel === labelCrct) {
-//             labelSel.style.backgroundColor = "green"
-//         } else {
-//             labelSel.style.backgroundColor = "red"
-//             labelCrct.style.backgroundColor = "green"
-//             labelCrct.style.color = "white"
-//         }
-//     })
-// })
 
 function checkAnswer() {
 
@@ -326,52 +205,3 @@ function checkAnswer() {
     }
 
 }
-
-
-
-
-// //  if (labelSel != labelCrct)
-// const allLabels = document.querySelectorAll('label[for^="opt"]');
-// const allInputs = document.querySelectorAll('input[name="opt"]');
-
-// function resetLabelStyles() {
-//   allLabels.forEach(l => {
-//     l.style.backgroundColor = '';
-//     l.style.color = '';
-//   });
-// }
-
-// function handleSelection() {
-//   const correctAns = quizQuestions[currentQuesNo].correct; // expected to be the input id, e.g. "opt1"
-//   const selectedOpt = document.querySelector('input[name="opt"]:checked');
-//   if (!selectedOpt) return; // safety guard
-
-//   const labelSel = document.querySelector(`label[for="${selectedOpt.id}"]`);
-//   const labelCrct = document.querySelector(`label[for="${correctAns}"]`);
-
-//   resetLabelStyles();
-
-//   if (labelSel === labelCrct) {
-//     labelSel.style.backgroundColor = 'green';
-//     labelSel.style.color = 'white';
-//   } else {
-//     labelSel.style.backgroundColor = 'red';
-//     labelCrct.style.backgroundColor = 'green';
-//     labelCrct.style.color = 'white';
-//   }
-// }
-
-// // Attach a single change listener to each radio input (fires after checked state updates)
-// allInputs.forEach(input => {
-//   input.addEventListener('change', handleSelection);
-// });
-
-// // (Optional) If you still want labels to show a visual active state on click immediately,
-// // attach a click handler that only toggles a transient active style — but do NOT reattach change listeners there.
-// allLabels.forEach(lbl => {
-//   lbl.addEventListener('click', () => {
-//     // small visual cue, but actual correctness logic runs in `change`
-//     allLabels.forEach(l => l.classList.remove('active'));
-//     lbl.classList.add('active');
-//   });
-// });
