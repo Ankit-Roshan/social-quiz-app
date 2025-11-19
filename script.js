@@ -99,8 +99,10 @@ let sec = 10
 
 let countDown = document.querySelector(".timer")
 
+let savedAnswers = new Array(quizQuestions.length).fill(null)
+
 function showQuestion() {
-   
+
 
     if (currentQuesNo >= quizQuestions.length) {
         currentQuesNo = 0;
@@ -118,8 +120,38 @@ function showQuestion() {
     option3.innerHTML = quizQuestions[currentQuesNo].opt3
     option4.innerHTML = quizQuestions[currentQuesNo].opt4
     console.log(currentQuesNo)
+
+    // let saved =savedAnswer[currentQuesNo]
+    // if(saved){
+    //     radio.value = saved;
+    //     radio.checked = true
+    // }
+    let saved = savedAnswers[currentQuesNo];
+    if (saved) {
+        let savedInput = document.getElementById(saved);
+        if (savedInput) {
+            savedInput.checked = true;
+        }
+        checkAnswer()
+    }
+
 }
 showQuestion();
+
+
+let allLabels = document.querySelectorAll(`label[for^="opt"]`)
+let allInputss = document.querySelectorAll('input[name=opt]')
+
+allInputss.forEach(inpt => {
+    inpt.addEventListener("change", () => {
+        savedAnswers[currentQuesNo] = inpt.id
+
+        checkAnswer()
+    })
+})
+
+
+
 
 nextBtn.addEventListener("click", () => {
     let optionSelected = document.querySelector('input[name="opt"]:checked')
@@ -151,34 +183,38 @@ nextBtn.addEventListener("click", () => {
     }
 })
 
+
+
+
+
 let backBtn = document.getElementById("backBtn")
 
 backBtn.addEventListener("click", back)
 function back() {
-    allLabels.forEach(l => l.style.backgroundColor = "");
+    if (currentQuesNo === 0) {
+        return
+    }
+    allLabels.forEach(l => {
+        l.style.backgroundColor = "";
+        l.style.color = "black"
+    });
 
-    allInputss.forEach(inpt => {
-        inpt.addEventListener("click", () => {
-            checkAnswer()
-        })
-    })
+    // allInputss.forEach(inpt => {
+    //     inpt.addEventListener("click", () => {
+    //         checkAnswer()
+    //     })
+    // })
 
     if (currentQuesNo === 0) {
         return
-    } else if (currentQuesNo > 0) {
+    } else if (currentQuesNo === 0) {
+        return
+    }
+    else if (currentQuesNo > 0) {
         currentQuesNo--
         showQuestion()
     }
 }
-
-let allLabels = document.querySelectorAll(`label[for^="opt"]`)
-let allInputss = document.querySelectorAll('input[name=opt]')
-
-allInputss.forEach(inpt => {
-    inpt.addEventListener("click", () => {
-        checkAnswer()
-    })
-})
 
 
 function checkAnswer() {
@@ -195,11 +231,16 @@ function checkAnswer() {
     console.log(selectedOpt)
 
     allLabels.forEach(l => l.style.backgroundColor = "");
+    let correctInput = document.getElementById(correctAns);
 
-    if (labelSel === labelCrct) {
+    if (selectedOpt.id === correctAns) {
         labelSel.style.backgroundColor = "green"
+        correctInput.checked = true;
+
     } else {
         labelSel.style.backgroundColor = "red"
+        correctInput.checked = true;
+        // selectedOpt.checked = true
         labelCrct.style.backgroundColor = "green"
         labelCrct.style.color = "white"
     }
