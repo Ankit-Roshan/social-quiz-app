@@ -127,6 +127,7 @@ function showQuestion() {
     //     radio.checked = true
     // }
     let saved = savedAnswers[currentQuesNo];
+    console.log("Ye wala",saved)
     if (saved) {
         let savedInput = document.getElementById(saved);
         if (savedInput) {
