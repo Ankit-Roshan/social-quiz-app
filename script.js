@@ -104,6 +104,7 @@ let nextBtn = document.getElementById("nextBtn")
 
 let currentQuesNo = 0;
 let score = 0;
+let galatAns = 0;
 let myInterval = null
 let sec = 10
 
@@ -182,23 +183,25 @@ nextBtn.addEventListener("click", () => {
     //     // score++
     //     console.log(score);
     // }
-    
+
     // currentQuesNo++
-    else if (currentQuesNo >= quizQuestions.length-1) {
+    else if (currentQuesNo >= quizQuestions.length - 1) {
         currentQuesNo = 0;
         // showQuestion()
         quizQuestions.forEach((q, i) => {
-        if (savedAnswers[i] === q.correct) {
-            score++
-            console.log(savedAnswers[i]);
-            console.log(q.correct);
-            console.log(score);
-            
-        }
-    });
+            if (savedAnswers[i] === q.correct) {
+                score++
+                console.log(savedAnswers[i]);
+                console.log(q.correct);
+                console.log(score);
 
-        // localStorage.setItem("scoreKitna", score)
-        // location.href = "./result.html"
+            } else if (savedAnswers[i] != q.correct) {
+                galatAns++
+            }
+        });
+        localStorage.setItem("galatKitna", galatAns)
+        localStorage.setItem("scoreKitna", score)
+        location.href = "./result.html"
     } else {
         currentQuesNo++
         showQuestion()
@@ -271,6 +274,32 @@ function checkAnswer() {
     }
 
 }
+let submit = document.getElementById("submit")
+submit.addEventListener("click", () => {
+    if (currentQuesNo < 4) {
+        alert(`please attemp atleast ${4 - currentQuesNo} more questions to submit`)
+    }
+    else if (currentQuesNo > 4) {
 
+
+        quizQuestions.forEach((q, i) => {
+            let saveds = savedAnswers[i]
+            if (saveds != null && saveds !== "") {
+
+                if (saveds === q.correct) {
+                    score++
+
+                } else if (saveds != q.correct) {
+                    galatAns++
+                }
+            }
+           
+        });
+        localStorage.setItem("galatKitna", galatAns)
+        localStorage.setItem("scoreKitna", score)
+        location.href = "./result.html"
+
+    }
+})
 
 

@@ -12,10 +12,15 @@
     <div class="containerScore">
         <p> Your Score</p>
         <p class="finalScore"></p>
+        <p class="wrongScore"></p>
     </div>
     <script>
         let finalScore = document.querySelector(".finalScore")
         finalScore.innerHTML=localStorage.getItem("scoreKitna")
+
+        let wrongScore = document.querySelector(".wrongScore")
+        wrongScore.innerHTML = localStorage.getItem("galatKitna")
+
     </script>
 </body>
 
