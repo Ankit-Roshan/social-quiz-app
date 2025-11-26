@@ -1,86 +1,96 @@
 
-const quizQuestions = [
-    {
-        question: "What is the name of the electric mouse Pokémon that is Ash's main partner?",
-        opt1: "Eevee",
-        opt2: "Pikachu",
-        opt3: "Squirtle",
-        opt4: "Charmander",
-        correct: "opt2",
-    },
-    {
-        question: "Which type is Bulbasaur primarily?",
-        opt1: "Fire",
-        opt2: "Water",
-        opt3: "Grass",
-        opt4: "Electric",
-        correct: "opt3",
-    },
-    {
-        question: "Which Pokémon evolves into Charmeleon?",
-        opt1: "Charmander",
-        opt2: "Charizard",
-        opt3: "Cyndaquil",
-        opt4: "Vulpix",
-        correct: "opt1",
-    },
-    {
-        question: "What item is commonly used to catch wild Pokémon?",
-        opt1: "Potion",
-        opt2: "Poké Ball",
-        opt3: "Bicycle",
-        opt4: "TM",
-        correct: "opt2",
-    },
-    {
-        question: "Which Pokémon is known as the 'Water Turtle' and can shoot water from its mouth?",
-        opt1: "Squirtle",
-        opt2: "Psyduck",
-        opt3: "Jigglypuff",
-        opt4: "Growlithe",
-        correct: "opt1",
-    },
-    {
-        question: "Which of these is a Normal-type Pokémon that can sing to put opponents to sleep?",
-        opt1: "Jigglypuff",
-        opt2: "Abra",
-        opt3: "Geodude",
-        opt4: "Onix",
-        correct: "opt1",
-    },
-    {
-        question: "What color is the default version of Pikachu?",
-        opt1: "Blue",
-        opt2: "Green",
-        opt3: "Yellow",
-        opt4: "Red",
-        correct: "opt3",
-    },
-    {
-        question: "Which Pokémon is a psychic-type that often holds its head and is known for confusion attacks?",
-        opt1: "Abra",
-        opt2: "Machop",
-        opt3: "Pidgey",
-        opt4: "Ekans",
-        correct: "opt1",
-    },
-    {
-        question: "Which starter Pokémon from the original games is fire-type?",
-        opt1: "Bulbasaur",
-        opt2: "Squirtle",
-        opt3: "Charmander",
-        opt4: "Pikachu",
-        correct: "opt3",
-    },
-    {
-        question: "Which evolution does Eevee NOT directly evolve into in Generation I?",
-        opt1: "Vaporeon",
-        opt2: "Jolteon",
-        opt3: "Flareon",
-        opt4: "Sylveon",
-        correct: "opt4",
-    },
-];
+// const quizQuestions = [
+//     {
+//         question: "What is the name of the electric mouse Pokémon that is Ash's main partner?",
+//         opt1: "Eevee",
+//         opt2: "Pikachu",
+//         opt3: "Squirtle",
+//         opt4: "Charmander",
+//         correct: "opt2",
+//     },
+//     {
+//         question: "Which type is Bulbasaur primarily?",
+//         opt1: "Fire",
+//         opt2: "Water",
+//         opt3: "Grass",
+//         opt4: "Electric",
+//         correct: "opt3",
+//     },
+//     {
+//         question: "Which Pokémon evolves into Charmeleon?",
+//         opt1: "Charmander",
+//         opt2: "Charizard",
+//         opt3: "Cyndaquil",
+//         opt4: "Vulpix",
+//         correct: "opt1",
+//     },
+//     {
+//         question: "What item is commonly used to catch wild Pokémon?",
+//         opt1: "Potion",
+//         opt2: "Poké Ball",
+//         opt3: "Bicycle",
+//         opt4: "TM",
+//         correct: "opt2",
+//     },
+//     {
+//         question: "Which Pokémon is known as the 'Water Turtle' and can shoot water from its mouth?",
+//         opt1: "Squirtle",
+//         opt2: "Psyduck",
+//         opt3: "Jigglypuff",
+//         opt4: "Growlithe",
+//         correct: "opt1",
+//     },
+//     {
+//         question: "Which of these is a Normal-type Pokémon that can sing to put opponents to sleep?",
+//         opt1: "Jigglypuff",
+//         opt2: "Abra",
+//         opt3: "Geodude",
+//         opt4: "Onix",
+//         correct: "opt1",
+//     },
+//     {
+//         question: "What color is the default version of Pikachu?",
+//         opt1: "Blue",
+//         opt2: "Green",
+//         opt3: "Yellow",
+//         opt4: "Red",
+//         correct: "opt3",
+//     },
+//     {
+//         question: "Which Pokémon is a psychic-type that often holds its head and is known for confusion attacks?",
+//         opt1: "Abra",
+//         opt2: "Machop",
+//         opt3: "Pidgey",
+//         opt4: "Ekans",
+//         correct: "opt1",
+//     },
+//     {
+//         question: "Which starter Pokémon from the original games is fire-type?",
+//         opt1: "Bulbasaur",
+//         opt2: "Squirtle",
+//         opt3: "Charmander",
+//         opt4: "Pikachu",
+//         correct: "opt3",
+//     },
+//     {
+//         question: "Which evolution does Eevee NOT directly evolve into in Generation I?",
+//         opt1: "Vaporeon",
+//         opt2: "Jolteon",
+//         opt3: "Flareon",
+//         opt4: "Sylveon",
+//         correct: "opt4",
+//     },
+// ];
+
+let params = new URLSearchParams(window.location.search)
+let category = params.get("category")
+console.log(params);
+console.log(category);
+
+let quizQuestions = allQuestions[category]
+
+console.log(quizQuestions);
+
 
 
 let quesNo = document.getElementById("quesNo")
@@ -119,7 +129,7 @@ function showQuestion() {
     option2.innerHTML = quizQuestions[currentQuesNo].opt2
     option3.innerHTML = quizQuestions[currentQuesNo].opt3
     option4.innerHTML = quizQuestions[currentQuesNo].opt4
-    console.log(currentQuesNo)
+    // console.log(currentQuesNo)
 
     // let saved =savedAnswer[currentQuesNo]
     // if(saved){
@@ -127,7 +137,7 @@ function showQuestion() {
     //     radio.checked = true
     // }
     let saved = savedAnswers[currentQuesNo];
-    console.log("Ye wala",saved)
+    // console.log("Ye wala",saved)
     if (saved) {
         let savedInput = document.getElementById(saved);
         if (savedInput) {
@@ -135,7 +145,6 @@ function showQuestion() {
         }
         checkAnswer()
     }
-
 }
 showQuestion();
 
@@ -156,6 +165,8 @@ allInputss.forEach(inpt => {
 
 nextBtn.addEventListener("click", () => {
     let optionSelected = document.querySelector('input[name="opt"]:checked')
+    let correctOption = quizQuestions[currentQuesNo].correct
+
     allLabels.forEach(l => {
         l.style.backgroundColor = "";
         l.style.color = "black";
@@ -164,24 +175,37 @@ nextBtn.addEventListener("click", () => {
 
     if (optionSelected == null) {
         alert("Please select one option")
-    } else {
-        let correctOption = quizQuestions[currentQuesNo].correct
-        if (optionSelected.id === correctOption) {
-            score++
-        }
-        // currentQuesNo++
-        if (currentQuesNo >= quizQuestions.length) {
-            currentQuesNo = 0;
-            // showQuestion()
-            localStorage.setItem("scoreKitna", score)
-            location.href = "./result.html"
-        } else {
-            currentQuesNo++
-            showQuestion()
-            // clearInterval(myInterval)
-            // myInterval = setInterval(timer, 1000)
-        }
     }
+
+    // else if (optionSelected.id === correctOption) {
+
+    //     // score++
+    //     console.log(score);
+    // }
+    
+    // currentQuesNo++
+    else if (currentQuesNo >= quizQuestions.length-1) {
+        currentQuesNo = 0;
+        // showQuestion()
+        quizQuestions.forEach((q, i) => {
+        if (savedAnswers[i] === q.correct) {
+            score++
+            console.log(savedAnswers[i]);
+            console.log(q.correct);
+            console.log(score);
+            
+        }
+    });
+
+        // localStorage.setItem("scoreKitna", score)
+        // location.href = "./result.html"
+    } else {
+        currentQuesNo++
+        showQuestion()
+        // clearInterval(myInterval)
+        // myInterval = setInterval(timer, 1000)
+    }
+
 })
 
 
@@ -226,24 +250,27 @@ function checkAnswer() {
     let labelSel = document.querySelector(`label[for ="${selectedOpt.id}"]`)
     let labelCrct = document.querySelector(`label[for ="${correctAns}"]`)
 
-    console.log(correctAns);
-    console.log(labelSel);
-    console.log(labelCrct);
-    console.log(selectedOpt)
+    // console.log(correctAns);
+    // console.log(labelSel);
+    // console.log(labelCrct);
+    // console.log(selectedOpt)
 
     allLabels.forEach(l => l.style.backgroundColor = "");
     let correctInput = document.getElementById(correctAns);
 
     if (selectedOpt.id === correctAns) {
         labelSel.style.backgroundColor = "green"
-        correctInput.checked = true;
+        // correctInput.checked = true;
 
     } else {
         labelSel.style.backgroundColor = "red"
-        correctInput.checked = true;
+        // correctInput.checked = true;
         // selectedOpt.checked = true
         labelCrct.style.backgroundColor = "green"
         labelCrct.style.color = "white"
     }
 
 }
+
+
+
