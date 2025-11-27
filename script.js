@@ -281,6 +281,8 @@ submit.addEventListener("click", () => {
     }
     else if (currentQuesNo > 4) {
 
+        let total = quizQuestions.length
+
 
         quizQuestions.forEach((q, i) => {
             let saveds = savedAnswers[i]
@@ -292,11 +294,16 @@ submit.addEventListener("click", () => {
                 } else if (saveds != q.correct) {
                     galatAns++
                 }
+
             }
-           
+
         });
+        let unattempted = total - (score + galatAns)
+
         localStorage.setItem("galatKitna", galatAns)
         localStorage.setItem("scoreKitna", score)
+        localStorage.setItem("unattemp", unattempted)
+
         location.href = "./result.html"
 
     }

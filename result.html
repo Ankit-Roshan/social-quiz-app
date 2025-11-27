@@ -13,6 +13,7 @@
         <p> Your Score</p>
         <p class="finalScore"></p>
         <p class="wrongScore"></p>
+        <p class="unattempted"></p>
     </div>
     <script>
         let finalScore = document.querySelector(".finalScore")
@@ -20,6 +21,9 @@
 
         let wrongScore = document.querySelector(".wrongScore")
         wrongScore.innerHTML = localStorage.getItem("galatKitna")
+
+        let unattemptedQues =document.querySelector(".unattempted")
+        unattemptedQues.innerHTML= localStorage.getItem("unattemp")
 
     </script>
 </body>
