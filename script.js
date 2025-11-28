@@ -109,6 +109,7 @@ let myInterval = null
 let sec = 10
 
 let countDown = document.querySelector(".timer")
+let backBtn = document.getElementById("backBtn")
 
 let savedAnswers = new Array(quizQuestions.length).fill(null)
 
@@ -119,10 +120,14 @@ function showQuestion() {
         currentQuesNo = 0;
         localStorage.setItem("scoreKitna", score)
         location.href = "./result.html"
+        return
     }
+    if (currentQuesNo === 0) {
+        backBtn.style.visibility = "hidden";
+    } else {
+        backBtn.style.visibility = "visible";
 
-    let options = document.querySelectorAll('input[name="opt"]');
-    options.forEach(option => option.checked = false)
+    }
 
     quesNo.innerText = (currentQuesNo + 1) + (".")
     quesText.innerHTML = quizQuestions[currentQuesNo].question
@@ -130,6 +135,9 @@ function showQuestion() {
     option2.innerHTML = quizQuestions[currentQuesNo].opt2
     option3.innerHTML = quizQuestions[currentQuesNo].opt3
     option4.innerHTML = quizQuestions[currentQuesNo].opt4
+
+    let options = document.querySelectorAll('input[name="opt"]');
+    options.forEach(option => option.checked = false)
     // console.log(currentQuesNo)
 
     // let saved =savedAnswer[currentQuesNo]
@@ -137,6 +145,11 @@ function showQuestion() {
     //     radio.value = saved;
     //     radio.checked = true
     // }
+    clearInterval(myInterval);  // stop old timer
+    sec = 10;                   // reset time
+    myInterval = setInterval(timer, 1000);
+
+
     let saved = savedAnswers[currentQuesNo];
     // console.log("Ye wala",saved)
     if (saved) {
@@ -212,11 +225,6 @@ nextBtn.addEventListener("click", () => {
 })
 
 
-
-
-
-let backBtn = document.getElementById("backBtn")
-
 backBtn.addEventListener("click", back)
 function back() {
     if (currentQuesNo === 0) {
@@ -235,10 +243,7 @@ function back() {
 
     if (currentQuesNo === 0) {
         return
-    } else if (currentQuesNo === 0) {
-        return
-    }
-    else if (currentQuesNo > 0) {
+    } else if (currentQuesNo > 0) {
         currentQuesNo--
         showQuestion()
     }
@@ -309,4 +314,11 @@ submit.addEventListener("click", () => {
     }
 })
 
+function timer() {
+    sec--
+    countDown.innerHTML = sec
+    if(sec<=0){
+       sec=10
+    }
+}
 
