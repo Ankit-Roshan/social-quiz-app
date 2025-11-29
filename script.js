@@ -1,86 +1,4 @@
 
-// const quizQuestions = [
-//     {
-//         question: "What is the name of the electric mouse Pokémon that is Ash's main partner?",
-//         opt1: "Eevee",
-//         opt2: "Pikachu",
-//         opt3: "Squirtle",
-//         opt4: "Charmander",
-//         correct: "opt2",
-//     },
-//     {
-//         question: "Which type is Bulbasaur primarily?",
-//         opt1: "Fire",
-//         opt2: "Water",
-//         opt3: "Grass",
-//         opt4: "Electric",
-//         correct: "opt3",
-//     },
-//     {
-//         question: "Which Pokémon evolves into Charmeleon?",
-//         opt1: "Charmander",
-//         opt2: "Charizard",
-//         opt3: "Cyndaquil",
-//         opt4: "Vulpix",
-//         correct: "opt1",
-//     },
-//     {
-//         question: "What item is commonly used to catch wild Pokémon?",
-//         opt1: "Potion",
-//         opt2: "Poké Ball",
-//         opt3: "Bicycle",
-//         opt4: "TM",
-//         correct: "opt2",
-//     },
-//     {
-//         question: "Which Pokémon is known as the 'Water Turtle' and can shoot water from its mouth?",
-//         opt1: "Squirtle",
-//         opt2: "Psyduck",
-//         opt3: "Jigglypuff",
-//         opt4: "Growlithe",
-//         correct: "opt1",
-//     },
-//     {
-//         question: "Which of these is a Normal-type Pokémon that can sing to put opponents to sleep?",
-//         opt1: "Jigglypuff",
-//         opt2: "Abra",
-//         opt3: "Geodude",
-//         opt4: "Onix",
-//         correct: "opt1",
-//     },
-//     {
-//         question: "What color is the default version of Pikachu?",
-//         opt1: "Blue",
-//         opt2: "Green",
-//         opt3: "Yellow",
-//         opt4: "Red",
-//         correct: "opt3",
-//     },
-//     {
-//         question: "Which Pokémon is a psychic-type that often holds its head and is known for confusion attacks?",
-//         opt1: "Abra",
-//         opt2: "Machop",
-//         opt3: "Pidgey",
-//         opt4: "Ekans",
-//         correct: "opt1",
-//     },
-//     {
-//         question: "Which starter Pokémon from the original games is fire-type?",
-//         opt1: "Bulbasaur",
-//         opt2: "Squirtle",
-//         opt3: "Charmander",
-//         opt4: "Pikachu",
-//         correct: "opt3",
-//     },
-//     {
-//         question: "Which evolution does Eevee NOT directly evolve into in Generation I?",
-//         opt1: "Vaporeon",
-//         opt2: "Jolteon",
-//         opt3: "Flareon",
-//         opt4: "Sylveon",
-//         correct: "opt4",
-//     },
-// ];
 
 let params = new URLSearchParams(window.location.search)
 let category = params.get("category")
@@ -105,20 +23,33 @@ let nextBtn = document.getElementById("nextBtn")
 let currentQuesNo = 0;
 let score = 0;
 let galatAns = 0;
+let unattempted = 0;
 let myInterval = null
-let sec = 10
+// let sec = 10
 
 let countDown = document.querySelector(".timer")
 let backBtn = document.getElementById("backBtn")
 
 let savedAnswers = new Array(quizQuestions.length).fill(null)
 
+let allInputss = document.querySelectorAll('input[name=opt]')
+let allLabels = document.querySelectorAll(`label[for^="opt"]`)
+
+let total = quizQuestions.length
+ unattempted = total - (score + galatAns)
+
 function showQuestion() {
 
+    console.log("score", score);
+    console.log("galat", galatAns);
+    console.log("galat", unattempted);
 
     if (currentQuesNo >= quizQuestions.length) {
         currentQuesNo = 0;
+
         localStorage.setItem("scoreKitna", score)
+        localStorage.setItem("galatKitna", galatAns)
+        localStorage.setItem("unattemp", unattempted)
         location.href = "./result.html"
         return
     }
@@ -138,15 +69,15 @@ function showQuestion() {
 
     let options = document.querySelectorAll('input[name="opt"]');
     options.forEach(option => option.checked = false)
-    // console.log(currentQuesNo)
 
-    // let saved =savedAnswer[currentQuesNo]
-    // if(saved){
-    //     radio.value = saved;
-    //     radio.checked = true
-    // }
-    clearInterval(myInterval);  // stop old timer
-    sec = 10;                   // reset time
+
+    allLabels.forEach(l => {
+        l.style.backgroundColor = "";
+        l.style.color = "black"
+    });
+
+    clearInterval(myInterval);
+    sec = 3;
     myInterval = setInterval(timer, 1000);
 
 
@@ -163,8 +94,8 @@ function showQuestion() {
 showQuestion();
 
 
-let allLabels = document.querySelectorAll(`label[for^="opt"]`)
-let allInputss = document.querySelectorAll('input[name=opt]')
+// let allLabels = document.querySelectorAll(`label[for^="opt"]`)
+// let allInputss = document.querySelectorAll('input[name=opt]')
 
 allInputss.forEach(inpt => {
     inpt.addEventListener("change", () => {
@@ -208,7 +139,7 @@ nextBtn.addEventListener("click", () => {
                 console.log(q.correct);
                 console.log(score);
 
-            } else if (savedAnswers[i] != q.correct) {
+            } else if (savedAnswers[i] != q.correct && savedAnswers[i] !== null) {
                 galatAns++
             }
         });
@@ -218,8 +149,8 @@ nextBtn.addEventListener("click", () => {
     } else {
         currentQuesNo++
         showQuestion()
-        // clearInterval(myInterval)
-        // myInterval = setInterval(timer, 1000)
+        clearInterval(myInterval)
+        myInterval = setInterval(timer, 1000)
     }
 
 })
@@ -230,10 +161,10 @@ function back() {
     if (currentQuesNo === 0) {
         return
     }
-    allLabels.forEach(l => {
-        l.style.backgroundColor = "";
-        l.style.color = "black"
-    });
+    // allLabels.forEach(l => {
+    //     l.style.backgroundColor = "";
+    //     l.style.color = "black"
+    // });
 
     // allInputss.forEach(inpt => {
     //     inpt.addEventListener("click", () => {
@@ -258,13 +189,23 @@ function checkAnswer() {
     let labelSel = document.querySelector(`label[for ="${selectedOpt.id}"]`)
     let labelCrct = document.querySelector(`label[for ="${correctAns}"]`)
 
-    // console.log(correctAns);
-    // console.log(labelSel);
-    // console.log(labelCrct);
-    // console.log(selectedOpt)
-
     allLabels.forEach(l => l.style.backgroundColor = "");
     let correctInput = document.getElementById(correctAns);
+
+      quizQuestions.forEach((q, i) => {
+            let saveds = savedAnswers[i]
+            if (saveds != null && saveds !== "") {
+
+                if (saveds === q.correct) {
+                    score++
+
+                } else if (saveds != q.correct && savedAnswers[i] !== null) {
+                    galatAns++
+                }
+
+            }
+
+        });
 
     if (selectedOpt.id === correctAns) {
         labelSel.style.backgroundColor = "green"
@@ -286,7 +227,8 @@ submit.addEventListener("click", () => {
     }
     else if (currentQuesNo > 4) {
 
-        let total = quizQuestions.length
+        // let total = quizQuestions.length
+        // let unattempted = total - (score + galatAns)
 
 
         quizQuestions.forEach((q, i) => {
@@ -296,18 +238,17 @@ submit.addEventListener("click", () => {
                 if (saveds === q.correct) {
                     score++
 
-                } else if (saveds != q.correct) {
+                } else if (saveds != q.correct && savedAnswers[i] !== null) {
                     galatAns++
                 }
 
             }
 
         });
-        let unattempted = total - (score + galatAns)
-
-        localStorage.setItem("galatKitna", galatAns)
         localStorage.setItem("scoreKitna", score)
+        localStorage.setItem("galatKitna", galatAns)
         localStorage.setItem("unattemp", unattempted)
+
 
         location.href = "./result.html"
 
@@ -317,8 +258,19 @@ submit.addEventListener("click", () => {
 function timer() {
     sec--
     countDown.innerHTML = sec
-    if(sec<=0){
-       sec=10
+
+    //  quizQuestions.forEach((q, i) => {
+    //         if (savedAnswers[i] === q.correct) {
+    //             score++
+    //         } else if (savedAnswers[i] != q.correct && savedAnswers[i]!== null) {
+    //             galatAns++
+    //         }
+    //     });
+    if (sec <= 0) {
+        clearInterval(myInterval)
+        currentQuesNo++
+        sec = 3
+        showQuestion()
     }
 }
 

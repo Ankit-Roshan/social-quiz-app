@@ -267,3 +267,89 @@ const allQuestions = {
     }
   ]
 };
+
+
+
+// const quizQuestions = [
+//     {
+//         question: "What is the name of the electric mouse Pokémon that is Ash's main partner?",
+//         opt1: "Eevee",
+//         opt2: "Pikachu",
+//         opt3: "Squirtle",
+//         opt4: "Charmander",
+//         correct: "opt2",
+//     },
+//     {
+//         question: "Which type is Bulbasaur primarily?",
+//         opt1: "Fire",
+//         opt2: "Water",
+//         opt3: "Grass",
+//         opt4: "Electric",
+//         correct: "opt3",
+//     },
+//     {
+//         question: "Which Pokémon evolves into Charmeleon?",
+//         opt1: "Charmander",
+//         opt2: "Charizard",
+//         opt3: "Cyndaquil",
+//         opt4: "Vulpix",
+//         correct: "opt1",
+//     },
+//     {
+//         question: "What item is commonly used to catch wild Pokémon?",
+//         opt1: "Potion",
+//         opt2: "Poké Ball",
+//         opt3: "Bicycle",
+//         opt4: "TM",
+//         correct: "opt2",
+//     },
+//     {
+//         question: "Which Pokémon is known as the 'Water Turtle' and can shoot water from its mouth?",
+//         opt1: "Squirtle",
+//         opt2: "Psyduck",
+//         opt3: "Jigglypuff",
+//         opt4: "Growlithe",
+//         correct: "opt1",
+//     },
+//     {
+//         question: "Which of these is a Normal-type Pokémon that can sing to put opponents to sleep?",
+//         opt1: "Jigglypuff",
+//         opt2: "Abra",
+//         opt3: "Geodude",
+//         opt4: "Onix",
+//         correct: "opt1",
+//     },
+//     {
+//         question: "What color is the default version of Pikachu?",
+//         opt1: "Blue",
+//         opt2: "Green",
+//         opt3: "Yellow",
+//         opt4: "Red",
+//         correct: "opt3",
+//     },
+//     {
+//         question: "Which Pokémon is a psychic-type that often holds its head and is known for confusion attacks?",
+//         opt1: "Abra",
+//         opt2: "Machop",
+//         opt3: "Pidgey",
+//         opt4: "Ekans",
+//         correct: "opt1",
+//     },
+//     {
+//         question: "Which starter Pokémon from the original games is fire-type?",
+//         opt1: "Bulbasaur",
+//         opt2: "Squirtle",
+//         opt3: "Charmander",
+//         opt4: "Pikachu",
+//         correct: "opt3",
+//     },
+//     {
+//         question: "Which evolution does Eevee NOT directly evolve into in Generation I?",
+//         opt1: "Vaporeon",
+//         opt2: "Jolteon",
+//         opt3: "Flareon",
+//         opt4: "Sylveon",
+//         correct: "opt4",
+//     },
+// ];
+
