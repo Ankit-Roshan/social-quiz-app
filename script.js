@@ -36,20 +36,38 @@ let allInputss = document.querySelectorAll('input[name=opt]')
 let allLabels = document.querySelectorAll(`label[for^="opt"]`)
 
 let total = quizQuestions.length
- unattempted = total - (score + galatAns)
+
+
+allInputss.forEach(inpt => {
+    inpt.addEventListener("change", () => {
+        savedAnswers[currentQuesNo] = inpt.id
+
+        checkAnswer()
+    })
+})
+console.log(quizQuestions.length);
 
 function showQuestion() {
+    console.log("Ques No", currentQuesNo);
 
-    console.log("score", score);
-    console.log("galat", galatAns);
-    console.log("galat", unattempted);
-
-    if (currentQuesNo >= quizQuestions.length) {
-        currentQuesNo = 0;
+    console.log("unattemp", unattempted);
+    if (currentQuesNo === quizQuestions.length - 1) {
+        scoreSaver()
+        unattempted = total - (score + galatAns)
 
         localStorage.setItem("scoreKitna", score)
         localStorage.setItem("galatKitna", galatAns)
         localStorage.setItem("unattemp", unattempted)
+
+        // console.log("hua calculate", score);
+        // console.log("score", score);
+        // console.log("galat", galatAns);
+    }
+
+    if (currentQuesNo >= quizQuestions.length) {
+        currentQuesNo = 0;
+
+
         location.href = "./result.html"
         return
     }
@@ -90,6 +108,7 @@ function showQuestion() {
         }
         checkAnswer()
     }
+
 }
 showQuestion();
 
@@ -97,13 +116,13 @@ showQuestion();
 // let allLabels = document.querySelectorAll(`label[for^="opt"]`)
 // let allInputss = document.querySelectorAll('input[name=opt]')
 
-allInputss.forEach(inpt => {
-    inpt.addEventListener("change", () => {
-        savedAnswers[currentQuesNo] = inpt.id
+// allInputss.forEach(inpt => {
+//     inpt.addEventListener("change", () => {
+//         savedAnswers[currentQuesNo] = inpt.id
 
-        checkAnswer()
-    })
-})
+//         checkAnswer()
+//     })
+// })
 
 
 
@@ -192,29 +211,29 @@ function checkAnswer() {
     allLabels.forEach(l => l.style.backgroundColor = "");
     let correctInput = document.getElementById(correctAns);
 
-      quizQuestions.forEach((q, i) => {
-            let saveds = savedAnswers[i]
-            if (saveds != null && saveds !== "") {
+    // if (currentQuesNo >= quizQuestions.length - 1) {
+    //     quizQuestions.forEach((q, i) => {
+    //         let saveds = savedAnswers[i]
 
-                if (saveds === q.correct) {
-                    score++
 
-                } else if (saveds != q.correct && savedAnswers[i] !== null) {
-                    galatAns++
-                }
+    //         if (saveds === q.correct) {
+    //             score++
 
-            }
+    //         } else if (saveds != q.correct && savedAnswers[i] !== null) {
+    //             galatAns++
+    //         }
+    //     });
+    //     localStorage.setItem("scoreKitna", score)
+    //     localStorage.setItem("galatKitna", galatAns)
+    //     localStorage.setItem("unattemp", unattempted)
+    // }
 
-        });
 
     if (selectedOpt.id === correctAns) {
         labelSel.style.backgroundColor = "green"
-        // correctInput.checked = true;
 
     } else {
         labelSel.style.backgroundColor = "red"
-        // correctInput.checked = true;
-        // selectedOpt.checked = true
         labelCrct.style.backgroundColor = "green"
         labelCrct.style.color = "white"
     }
@@ -274,3 +293,19 @@ function timer() {
     }
 }
 
+function scoreSaver() {
+    quizQuestions.forEach((q, i) => {
+        let saveds = savedAnswers[i]
+        if (saveds != null && saveds !== "") {
+
+            if (saveds === q.correct) {
+                score++
+
+            } else if (saveds != q.correct && savedAnswers[i] !== null) {
+                galatAns++
+            }
+
+        }
+
+    });
+}
