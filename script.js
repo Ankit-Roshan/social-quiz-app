@@ -4,10 +4,18 @@ let params = new URLSearchParams(window.location.search)
 let category = params.get("category")
 console.log(params);
 console.log(category);
+let storedCatName = localStorage.getItem("selectedCat")
+if (!category) {
+    category = storedCatName
+}
+console.log(category);
+
 
 let quizQuestions = allQuestions[category]
 
+console.log(allQuestions);
 console.log(quizQuestions);
+
 
 
 
@@ -36,7 +44,9 @@ let allInputss = document.querySelectorAll('input[name=opt]')
 let allLabels = document.querySelectorAll(`label[for^="opt"]`)
 
 let total = quizQuestions.length
-
+localStorage.setItem("totalKitna", total)
+// console.log(nayaVal);
+// console.log(total);
 
 allInputss.forEach(inpt => {
     inpt.addEventListener("change", () => {
@@ -45,16 +55,19 @@ allInputss.forEach(inpt => {
         checkAnswer()
     })
 })
-console.log(quizQuestions.length);
+// console.log(quizQuestions.length);
+
+
 
 function showQuestion() {
-    console.log("Ques No", currentQuesNo);
 
-    console.log("unattemp", unattempted);
     if (currentQuesNo === quizQuestions.length - 1) {
         scoreSaver()
         unattempted = total - (score + galatAns)
+        let percent = (score / total) * 100
+        console.log("percent:", percent);
 
+        localStorage.setItem("percentKitna", percent)
         localStorage.setItem("scoreKitna", score)
         localStorage.setItem("galatKitna", galatAns)
         localStorage.setItem("unattemp", unattempted)

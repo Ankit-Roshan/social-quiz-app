@@ -6,24 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <style>
+        .performanceKeysa.excellent {
+            color: #4caf50;
+            /* green */
+        }
+
+        .performanceKeysa.good {
+            color: #ff9800;
+            /* orange */
+        }
+
+        .performanceKeysa.poor {
+            color: #f44336;
+            /* red */
+        }
+    </style>
 </head>
 
 <body>
     <div class="containerScore">
-        <p> Your Score</p>
-        <p class="finalScore"></p>
-        <p class="wrongScore"></p>
-        <p class="unattempted"></p>
+
+        <p>Score</p>
+        <p><span class="finalScore"></span></p>
+        <p class="score">OUT OF <span class="totalQues"></span></p>
+
+
+        <div class="report">
+            <p>Total Question: <span class="totalQues"></span></p>
+            <p>Correct Answers <span class="finalScore"></span></p>
+            <p>Incorrect Answer <span class="wrongScore"></span></p>
+            <p>Not Attempted <span class="unattempted"></span></p>
+            <p>Percentage <span class="percent"></span></p>
+            <p class="performanceKeysa"></p>
+
+            <div class="result-actions">
+                <button class="homeBtn">Home</button>
+                <button class="retryBtn">Retry</button>
+            </div>
+        </div>
+
     </div>
     <script>
-        let finalScore = document.querySelector(".finalScore")
-        finalScore.innerHTML=localStorage.getItem("scoreKitna")
+        let totalQues = document.querySelectorAll(".totalQues")
+        totalQues.forEach(tq => {
+            tq.innerHTML = localStorage.getItem("totalKitna")
+        })
+
+
+        let finalScore = document.querySelectorAll(".finalScore")
+        finalScore.forEach(el => {
+            el.innerHTML = localStorage.getItem("scoreKitna")
+        });
 
         let wrongScore = document.querySelector(".wrongScore")
         wrongScore.innerHTML = localStorage.getItem("galatKitna")
 
-        let unattemptedQues =document.querySelector(".unattempted")
-        unattemptedQues.innerHTML= localStorage.getItem("unattemp")
+        let unattemptedQues = document.querySelector(".unattempted")
+        unattemptedQues.innerHTML = localStorage.getItem("unattemp")
+
+        let percenta = document.querySelectorAll(".percent")
+        percenta.forEach(pr => {
+            pr.innerHTML = localStorage.getItem("percentKitna") + " %"
+        });
+        let finalPercent = localStorage.getItem("percentKitna")
+        console.log(finalPercent);
+
+        let performanceKeysa = document.querySelector(".performanceKeysa")
+        if (finalPercent >= 80) {
+            performanceKeysa.innerHTML = "excellent"
+            performanceKeysa.classList.add('excellent');
+        } else if (finalPercent < 80 && finalPercent > 50) {
+            performanceKeysa.innerHTML = "Good Effort!"
+            performanceKeysa.classList.add('good');
+        } else if (finalPercent < 50) {
+            performanceKeysa.innerHTML = "Keep practicing!"
+            performanceKeysa.classList.add('poor');
+        }
+
+        let homeBtn = document.querySelector(".homeBtn")
+        let retryBtn = document.querySelector(".retryBtn")
+
+        // retryBtn.addEventListener("click", ()=>{
+        //     localStorage.removeItem("percentKitna")
+        //     localStorage.removeItem("scoreKitna")
+        //     localStorage.removeItem("galatKitna")
+        //     localStorage.removeItem("unattemp")
+
+        //     location.href ="questions.html"
+        // })
+
+        if (retryBtn) {
+    retryBtn.addEventListener("click", () => {
+        // Clear all quiz-related stored data
+        localStorage.removeItem("percentKitna");
+        localStorage.removeItem("scoreKitna");
+        localStorage.removeItem("galatKitna");
+        localStorage.removeItem("unattemp");
+
+        // Redirect to quiz page
+        location.href = "questions.html";
+    });
+}
+
+        homeBtn.addEventListener("click", ()=>{
+            location.href ="index.html"
+
+        })
 
     </script>
 </body>

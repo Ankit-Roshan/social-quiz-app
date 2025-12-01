@@ -14,23 +14,29 @@
 
     <div class="container">
 
-        <a href="questions.html?category=gk" class="box">
+        <a href="questions.html?category=gk" class="box" onclick="savekar('gk')">
             <h2>General Knowledge</h2>
         </a>
 
-        <a href="questions.html?category=science" class="box">
+        <a href="questions.html?category=science" class="box" onclick="savekar('science')">
             <h2>Science</h2>
         </a>
 
-        <a href="questions.html?category=current" class="box">
+        <a href="questions.html?category=current" class="box" onclick="savekar('current')">
             <h2>Current Affairs</h2>
         </a>
 
-        <a href="questions.html?category=english" class="box">
+        <a href="questions.html?category=english" class="box" onclick="savekar('english')">
             <h2>English Grammar</h2>
         </a>
         <!-- <script src="newScript.js"></script>
         <script src="script.js"></script> -->
+        <script>
+           function savekar(catName){
+            localStorage.setItem("selectedCat",catName)
+           } 
+        </script>
+
 </body>
 
-</html>
+</html> 
