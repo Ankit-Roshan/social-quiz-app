@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="result.css">
     <title>Document</title>
     <style>
         .performanceKeysa.excellent {
@@ -33,11 +33,87 @@
 
 
         <div class="report">
-            <p>Total Question: <span class="totalQues"></span></p>
-            <p>Correct Answers <span class="finalScore"></span></p>
-            <p>Incorrect Answer <span class="wrongScore"></span></p>
-            <p>Not Attempted <span class="unattempted"></span></p>
-            <p>Percentage <span class="percent"></span></p>
+<!-- 
+            <div class="longRow">
+                <div class="logoText">
+                    <p><img src="./images/help.png" alt="" class="icon">Total Question: </p>
+                </div>
+                <span class="totalQues"></span>
+            </div>
+            <div class="longRow">
+                <div class="logoText">
+                    <p><img src="./images/check.png" alt="" class="icon">Correct Answers: </p>
+                </div>
+                <span class="finalScore"></span>
+            </div>
+            <div class="longRow">
+                <div class="logoText">
+                    <p><img src="./images/no.png" alt="" class="icon">Incorrect Answer: </p>
+                </div>
+                <span class="wrongScore"></span>
+            </div>
+            <div class="longRow">
+                <div class="logoText">
+                    <p><img src="./images/question-mark.png" alt="" class="icon">Not Attempted: </p>
+                </div>
+                <span class="unattempted"></span>
+            </div>
+            <div class="longRow">
+                <div class="logoText">
+                    <p><img src="./images/percent.png" alt="" class="icon">Percentage: </p>
+                </div>
+                <span class="percent"></span>
+            </div> -->
+
+
+<div class="longRow">
+    <div class="leftPart">
+        <img src="./images/questionBlue.png" class="icon">
+        <span>Total Question:</span>
+    </div>
+    <span class="totalQues value"></span>
+</div>
+
+<div class="longRow">
+    <div class="leftPart">
+        <img src="./images/check.png" class="icon">
+        <span>Correct Answers:</span>
+    </div>
+    <span class="finalScore value"></span>
+</div>
+
+<div class="longRow">
+    <div class="leftPart">
+        <img src="./images/wrong.png" class="icon">
+        <span>Incorrect Answer:</span>
+    </div>
+    <span class="wrongScore value"></span>
+</div>
+
+<div class="longRow">
+    <div class="leftPart">
+        <img src="./images/notattempt.png" class="icon">
+        <span>Not Attempted:</span>
+    </div>
+    <span class="unattempted value"></span>
+</div>
+
+<div class="longRow">
+    <div class="leftPart">
+        <img src="./images/percentage.png" class="icon">
+        <span>Percentage:</span>
+    </div>
+    <span class="percent value"></span>
+</div>
+
+
+
+
+
+
+
+
+
             <p class="performanceKeysa"></p>
 
             <div class="result-actions">
@@ -97,20 +173,20 @@
         // })
 
         if (retryBtn) {
-    retryBtn.addEventListener("click", () => {
-        // Clear all quiz-related stored data
-        localStorage.removeItem("percentKitna");
-        localStorage.removeItem("scoreKitna");
-        localStorage.removeItem("galatKitna");
-        localStorage.removeItem("unattemp");
+            retryBtn.addEventListener("click", () => {
+                // Clear all quiz-related stored data
+                localStorage.removeItem("percentKitna");
+                localStorage.removeItem("scoreKitna");
+                localStorage.removeItem("galatKitna");
+                localStorage.removeItem("unattemp");
 
-        // Redirect to quiz page
-        location.href = "questions.html";
-    });
-}
+                // Redirect to quiz page
+                location.href = "questions.html";
+            });
+        }
 
-        homeBtn.addEventListener("click", ()=>{
-            location.href ="index.html"
+        homeBtn.addEventListener("click", () => {
+            location.href = "index.html"
 
         })
 

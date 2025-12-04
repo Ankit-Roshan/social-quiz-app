@@ -8,13 +8,13 @@ let storedCatName = localStorage.getItem("selectedCat")
 if (!category) {
     category = storedCatName
 }
-console.log(category);
+// console.log(category);
 
 
 let quizQuestions = allQuestions[category]
 
-console.log(allQuestions);
-console.log(quizQuestions);
+// console.log(allQuestions);
+// console.log(quizQuestions);
 
 
 
@@ -55,11 +55,14 @@ allInputss.forEach(inpt => {
         checkAnswer()
     })
 })
-// console.log(quizQuestions.length);
 
 
 
 function showQuestion() {
+
+    console.log(currentQuesNo);
+    console.log(quizQuestions.length - 1);
+
 
     if (currentQuesNo === quizQuestions.length - 1) {
         scoreSaver()
@@ -72,15 +75,16 @@ function showQuestion() {
         localStorage.setItem("galatKitna", galatAns)
         localStorage.setItem("unattemp", unattempted)
 
+        nextBtn.style.visibility = "hidden"
+
         // console.log("hua calculate", score);
         // console.log("score", score);
         // console.log("galat", galatAns);
-    }
+    } 
+   
 
     if (currentQuesNo >= quizQuestions.length) {
         currentQuesNo = 0;
-
-
         location.href = "./result.html"
         return
     }
@@ -88,8 +92,9 @@ function showQuestion() {
         backBtn.style.visibility = "hidden";
     } else {
         backBtn.style.visibility = "visible";
-
     }
+
+   
 
     quesNo.innerText = (currentQuesNo + 1) + (".")
     quesText.innerHTML = quizQuestions[currentQuesNo].question
@@ -139,7 +144,6 @@ showQuestion();
 
 
 
-
 nextBtn.addEventListener("click", () => {
     let optionSelected = document.querySelector('input[name="opt"]:checked')
     let correctOption = quizQuestions[currentQuesNo].correct
@@ -152,33 +156,9 @@ nextBtn.addEventListener("click", () => {
 
     if (optionSelected == null) {
         alert("Please select one option")
-    }
-
-    // else if (optionSelected.id === correctOption) {
-
-    //     // score++
-    //     console.log(score);
-    // }
-
-    // currentQuesNo++
-    else if (currentQuesNo >= quizQuestions.length - 1) {
-        currentQuesNo = 0;
-        // showQuestion()
-        quizQuestions.forEach((q, i) => {
-            if (savedAnswers[i] === q.correct) {
-                score++
-                console.log(savedAnswers[i]);
-                console.log(q.correct);
-                console.log(score);
-
-            } else if (savedAnswers[i] != q.correct && savedAnswers[i] !== null) {
-                galatAns++
-            }
-        });
-        localStorage.setItem("galatKitna", galatAns)
-        localStorage.setItem("scoreKitna", score)
-        location.href = "./result.html"
     } else {
+        nextBtn.style.visibility = "visible";
+
         currentQuesNo++
         showQuestion()
         clearInterval(myInterval)
