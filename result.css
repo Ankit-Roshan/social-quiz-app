@@ -5,26 +5,51 @@ body {
     background: #f2f4f7;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     height: 100vh;
 }
 
 .containerScore {
+    margin-top: 4rem;
     width: 380px;
-    background: #ffffff;
+    /* background: #e44a4a; */
     padding: 25px 30px;
     border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); */
     text-align: center;
 }
 
-.containerScore>p:first-child {
+.scrBoard>p:first-child {
     font-size: 26px;
     margin-bottom: 10px;
     font-weight: 600;
     color: #333;
 }
+.topBoard{
+    display: flex;
+    justify-content: center;
+}
+.scrBoard{
+    background: rgb(234, 234, 230);
+    width: 45%;
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+    /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
+    /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); */
+}
+#point1{
+  font-size: 40px;
+    font-weight: 700;
+    color: #007bff;
+    background: rgb(213, 210, 210); 
+    padding: 0.5rem; 
+    padding-left: 1.8rem; 
+    padding-right: 1.8rem;
+    /* box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.28); */
+    border-radius: 3px;
 
+}
 .finalScore {
     font-size: 40px;
     font-weight: 700;
@@ -43,15 +68,15 @@ body {
     margin-top: 15px;
     padding: 15px;
     border-radius: 14px;
-    background: #f7f9fc;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+    background: #eff3f9;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .report p {
     /* background: yellow; */
     font-size: 16px;
     margin: 8px 0;
-    color: #555;
+    color: #6c0d0d;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,7 +94,7 @@ body {
 .result-actions {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .result-actions button {
@@ -77,16 +102,19 @@ body {
     padding: 12px;
     border: none;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 1.4rem;
     font-weight: 500;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
 /* Home Button */
-.homeBtn {
+.homeBtn{
     background-color: #1a7d1d;
     color: white;
+    font-size: 33rem;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+
 }
 
 .homeBtn:hover {
@@ -97,69 +125,13 @@ body {
 .retryBtn {
     background-color: #007bff;
     color: white;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+
 }
 
 .retryBtn:hover {
     background-color: #005fcc;
 }
-/* 
-.icon {
-    width: 18px;
-}
-
-.longRow {
-    background: yellow;
-    display: flex;
-    align-items: center;
-}
-
-.logoText {
-    margin: 0;
-    padding: 0;
-    background: pink;
-    width: 58%;
-    display: flex;
-    justify-content: space-around;
-    justify-items: left;
-}
-
-.logoText p {
-    background: #000;
-} */
-/*  
- .longRow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 12px 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.logoText {
-    background: #000;
-    width: 70%;
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-}
-
-.icon {
-    width: 28px;
-    height: 28px;
-}
-
-.logoText p {
-    
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0;
-}
-
-.longRow span {
-    font-size: 20px;
-    font-weight: 700;
-} */
 
 .longRow {
     display: flex;
@@ -167,14 +139,14 @@ body {
     align-items: center;
 
     padding: 15px 10px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #d4d0d0;
     font-family: Arial, sans-serif;
 }
 
 .leftPart {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
 }
 
 .icon {
@@ -192,4 +164,19 @@ body {
     font-size: 22px;
     font-weight: 700;
     color: #000;
+}
+.perform{
+    /* background: #000; */
+    height: 6rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.perform p{
+    /* background: yellowgreen; */
+    width: 90%;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
 }

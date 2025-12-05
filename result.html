@@ -8,7 +8,7 @@
     <title>Document</title>
     <style>
         .performanceKeysa.excellent {
-            color: #4caf50;
+            color: #1bad20;
             /* green */
         }
 
@@ -27,94 +27,62 @@
 <body>
     <div class="containerScore">
 
-        <p>Score</p>
-        <p><span class="finalScore"></span></p>
-        <p class="score">OUT OF <span class="totalQues"></span></p>
+        <div class="topBoard">
+            <div class="scrBoard">
+                <p>Score</p>
+                <p><span class="finalScore" id="point1"></span></p>
+                <p class="score">OUT OF <span class="totalQues"></span></p>
+
+            </div>
+        </div>
 
 
         <div class="report">
-<!-- 
+
             <div class="longRow">
-                <div class="logoText">
-                    <p><img src="./images/help.png" alt="" class="icon">Total Question: </p>
+                <div class="leftPart">
+                    <img src="./images/help.png" class="icon">
+                    <span>Total Question:</span>
                 </div>
-                <span class="totalQues"></span>
+                <span class="totalQues value"></span>
             </div>
+
             <div class="longRow">
-                <div class="logoText">
-                    <p><img src="./images/check.png" alt="" class="icon">Correct Answers: </p>
+                <div class="leftPart">
+                    <img src="./images/check.png" class="icon">
+                    <span>Correct Answers:</span>
                 </div>
-                <span class="finalScore"></span>
+                <span class="finalScore value"></span>
             </div>
+
             <div class="longRow">
-                <div class="logoText">
-                    <p><img src="./images/no.png" alt="" class="icon">Incorrect Answer: </p>
+                <div class="leftPart">
+                    <img src="./images/no.png" class="icon">
+                    <span>Incorrect Answer:</span>
                 </div>
-                <span class="wrongScore"></span>
+                <span class="wrongScore value"></span>
             </div>
+
             <div class="longRow">
-                <div class="logoText">
-                    <p><img src="./images/question-mark.png" alt="" class="icon">Not Attempted: </p>
+                <div class="leftPart">
+                    <img src="./images/question-mark.png" class="icon">
+                    <span>Not Attempted:</span>
                 </div>
-                <span class="unattempted"></span>
+                <span class="unattempted value"></span>
             </div>
+
             <div class="longRow">
-                <div class="logoText">
-                    <p><img src="./images/percent.png" alt="" class="icon">Percentage: </p>
+                <div class="leftPart">
+                    <img src="./images/percent.png" class="icon">
+                    <span>Percentage:</span>
                 </div>
-                <span class="percent"></span>
-            </div> -->
+                <span class="percent value"></span>
+            </div>
+            <div class="perform">
+                <p class="performanceKeysa"></p>
 
+            </div>
 
-<div class="longRow">
-    <div class="leftPart">
-        <img src="./images/questionBlue.png" class="icon">
-        <span>Total Question:</span>
-    </div>
-    <span class="totalQues value"></span>
-</div>
-
-<div class="longRow">
-    <div class="leftPart">
-        <img src="./images/check.png" class="icon">
-        <span>Correct Answers:</span>
-    </div>
-    <span class="finalScore value"></span>
-</div>
-
-<div class="longRow">
-    <div class="leftPart">
-        <img src="./images/wrong.png" class="icon">
-        <span>Incorrect Answer:</span>
-    </div>
-    <span class="wrongScore value"></span>
-</div>
-
-<div class="longRow">
-    <div class="leftPart">
-        <img src="./images/notattempt.png" class="icon">
-        <span>Not Attempted:</span>
-    </div>
-    <span class="unattempted value"></span>
-</div>
-
-<div class="longRow">
-    <div class="leftPart">
-        <img src="./images/percentage.png" class="icon">
-        <span>Percentage:</span>
-    </div>
-    <span class="percent value"></span>
-</div>
-
-
-
-
-
-
-
-
-
-            <p class="performanceKeysa"></p>
 
             <div class="result-actions">
                 <button class="homeBtn">Home</button>
@@ -149,10 +117,10 @@
         console.log(finalPercent);
 
         let performanceKeysa = document.querySelector(".performanceKeysa")
-        if (finalPercent >= 80) {
-            performanceKeysa.innerHTML = "excellent"
+        if (finalPercent >= 75) {
+            performanceKeysa.innerHTML = "Excellent"
             performanceKeysa.classList.add('excellent');
-        } else if (finalPercent < 80 && finalPercent > 50) {
+        } else if (finalPercent < 75 && finalPercent > 50) {
             performanceKeysa.innerHTML = "Good Effort!"
             performanceKeysa.classList.add('good');
         } else if (finalPercent < 50) {

@@ -10,7 +10,13 @@
 
 <body>
     <div class="container">
+        <div class="timerHeading">
+            <div class="timeWala">
+                <p class="timer"></p>
+            </div>
         <p class="heading">Quiz App</p>
+
+        </div>
         <div class="questions">
             <span id="quesNo">1.</span>
             <span id="quesText"></span>
@@ -26,15 +32,21 @@
             <input type="radio" name="opt" id="opt4">
             <label for="opt4" id="option4"></label>
         </div>
-        <div class="timeWala">
-            <p class="timer"></p>
+
+        <div class="lowerSecBtn">
+            <div class="backNxt">
+                <input type="button" value="BACK" id="backBtn">
+                <input type="button" value="Next" id="nextBtn">
+            </div>
+            <div class="submitSec">
+                <input type="button" value="SUBMIT" id="submit">
+
+            </div>
         </div>
-        <input type="button" value="BACK" id="backBtn">
-        <input type="button" value="Next" id="nextBtn">
-        <input type="button" value="SUBMIT" id="submit">
-        <input type="button" value="Check Kar" id="checkKar">
+
+        <!-- <input type="button" value="Check Kar" id="checkKar"> -->
     </div>
-    
+
     <script src="newScript.js"></script>
     <script src="script.js"></script>
 

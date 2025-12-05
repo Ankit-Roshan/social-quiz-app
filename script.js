@@ -80,6 +80,9 @@ function showQuestion() {
         // console.log("hua calculate", score);
         // console.log("score", score);
         // console.log("galat", galatAns);
+    }else{
+        nextBtn.style.visibility = "visible"
+
     } 
    
 
@@ -89,8 +92,10 @@ function showQuestion() {
         return
     }
     if (currentQuesNo === 0) {
-        backBtn.style.visibility = "hidden";
+        backBtn.disabled = true;
     } else {
+        backBtn.disabled = false;
+
         backBtn.style.visibility = "visible";
     }
 
@@ -113,7 +118,7 @@ function showQuestion() {
     });
 
     clearInterval(myInterval);
-    sec = 3;
+    sec = 30;
     myInterval = setInterval(timer, 1000);
 
 
@@ -165,7 +170,7 @@ nextBtn.addEventListener("click", () => {
         myInterval = setInterval(timer, 1000)
     }
 
-})
+});
 
 
 backBtn.addEventListener("click", back)
@@ -227,6 +232,8 @@ function checkAnswer() {
 
     } else {
         labelSel.style.backgroundColor = "red"
+        labelSel.style.color = "white"
+
         labelCrct.style.backgroundColor = "green"
         labelCrct.style.color = "white"
     }
@@ -270,18 +277,10 @@ submit.addEventListener("click", () => {
 function timer() {
     sec--
     countDown.innerHTML = sec
-
-    //  quizQuestions.forEach((q, i) => {
-    //         if (savedAnswers[i] === q.correct) {
-    //             score++
-    //         } else if (savedAnswers[i] != q.correct && savedAnswers[i]!== null) {
-    //             galatAns++
-    //         }
-    //     });
     if (sec <= 0) {
         clearInterval(myInterval)
         currentQuesNo++
-        sec = 3
+        sec = 30
         showQuestion()
     }
 }
