@@ -11,17 +11,32 @@
 <body>
     <div class="container">
         <div class="timerHeading">
+            <!-- <div class="whichQues">
+                <p><span class="quesAbhi"></span>/<span class="ttlQues"></span></p>
+            </div> -->
             <div class="timeWala">
                 <p class="timer"></p>
             </div>
-        <p class="heading">Quiz App</p>
+            <!-- <p class="heading">Quiz App</p> -->
+            <div class="submitSec">
+                <input type="button" value="SUBMIT" id="submit">
 
+            </div>
         </div>
-        <div class="questions">
-            <span id="quesNo">1.</span>
-            <span id="quesText"></span>
-            <!-- what is the name of largest mammal? -->
+        <div class="quesBox">
+            <div class="questions">
+                <div class="whichQues">
+                    <p><span class="quesAbhi"></span>/<span class="ttlQues"></span></p>
+                </div>
+                <span id="quesNo"></span>
+                <span id="quesText"></span>
+                <!-- what is the name of largest mammal? -->
+            </div>
+            <!-- <div class="timeWala">
+                <p class="timer"></p>
+            </div>   -->
         </div>
+
         <div class="optContainer">
             <input type="radio" name="opt" id="opt1">
             <label for="opt1" id="option1"></label>
@@ -38,10 +53,10 @@
                 <input type="button" value="BACK" id="backBtn">
                 <input type="button" value="Next" id="nextBtn">
             </div>
-            <div class="submitSec">
+            <!-- <div class="submitSec">
                 <input type="button" value="SUBMIT" id="submit">
 
-            </div>
+            </div> -->
         </div>
 
         <!-- <input type="button" value="Check Kar" id="checkKar"> -->

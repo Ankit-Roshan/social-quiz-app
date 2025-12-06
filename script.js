@@ -48,6 +48,11 @@ localStorage.setItem("totalKitna", total)
 // console.log(nayaVal);
 // console.log(total);
 
+
+
+let ttlQues =document.querySelector(".ttlQues")
+ttlQues.innerHTML = total
+
 allInputss.forEach(inpt => {
     inpt.addEventListener("change", () => {
         savedAnswers[currentQuesNo] = inpt.id
@@ -62,46 +67,62 @@ function showQuestion() {
 
     console.log(currentQuesNo);
     console.log(quizQuestions.length - 1);
-
+let quesAbhi = document.querySelector(".quesAbhi")
+quesAbhi.innerHTML = currentQuesNo+1
 
     if (currentQuesNo === quizQuestions.length - 1) {
-        scoreSaver()
-        unattempted = total - (score + galatAns)
-        let percent = (score / total) * 100
-        console.log("percent:", percent);
 
-        localStorage.setItem("percentKitna", percent)
-        localStorage.setItem("scoreKitna", score)
-        localStorage.setItem("galatKitna", galatAns)
-        localStorage.setItem("unattemp", unattempted)
+        console.log("point:-", score);
+        clearInterval(myInterval);
 
-        nextBtn.style.visibility = "hidden"
+        // scoreSaver()
+        // unattempted = total - (score + galatAns)
+        // let percent = (score / total) * 100
+        // console.log("percent:", percent);
+
+        // localStorage.setItem("percentKitna", percent)
+        // localStorage.setItem("scoreKitna", score)
+        // localStorage.setItem("galatKitna", galatAns)
+        // localStorage.setItem("unattemp", unattempted)
+
+        nextBtn.style.visibility = "visible"
+         nextBtn.style.background ="grey"
+           nextBtn.disabled = true;
+        //  countDown.style.visibility = "hidden"
+
 
         // console.log("hua calculate", score);
         // console.log("score", score);
         // console.log("galat", galatAns);
-    }else{
+    } else {
         nextBtn.style.visibility = "visible"
+           nextBtn.disabled = false;
+         nextBtn.style.background ="blue"
+        //  countDown.style.visibility = "visible"
 
-    } 
-   
 
-    if (currentQuesNo >= quizQuestions.length) {
-        currentQuesNo = 0;
-        location.href = "./result.html"
-        return
+
     }
+
+
+    // if (currentQuesNo >= quizQuestions.length) {
+    //     currentQuesNo = 0;
+    //     location.href = "./result.html"
+    //     return
+    // }
     if (currentQuesNo === 0) {
         backBtn.disabled = true;
+        backBtn.style.background = "grey"
     } else {
         backBtn.disabled = false;
+        backBtn.style.background = "blue"
 
         backBtn.style.visibility = "visible";
     }
 
-   
 
-    quesNo.innerText = (currentQuesNo + 1) + (".")
+
+    // quesNo.innerText = (currentQuesNo + 1) + (".")
     quesText.innerHTML = quizQuestions[currentQuesNo].question
     option1.innerHTML = quizQuestions[currentQuesNo].opt1
     option2.innerHTML = quizQuestions[currentQuesNo].opt2
@@ -118,7 +139,7 @@ function showQuestion() {
     });
 
     clearInterval(myInterval);
-    sec = 30;
+    sec = 3;
     myInterval = setInterval(timer, 1000);
 
 
@@ -229,10 +250,11 @@ function checkAnswer() {
 
     if (selectedOpt.id === correctAns) {
         labelSel.style.backgroundColor = "green"
+        labelSel.style.color = "white"
 
     } else {
         labelSel.style.backgroundColor = "red"
-        labelSel.style.color = "white"
+        labelSel.style.color = "black"
 
         labelCrct.style.backgroundColor = "green"
         labelCrct.style.color = "white"
@@ -250,24 +272,32 @@ submit.addEventListener("click", () => {
         // let unattempted = total - (score + galatAns)
 
 
-        quizQuestions.forEach((q, i) => {
-            let saveds = savedAnswers[i]
-            if (saveds != null && saveds !== "") {
+        // quizQuestions.forEach((q, i) => {
+        //     let saveds = savedAnswers[i]
+        //     if (saveds != null && saveds !== "") {
 
-                if (saveds === q.correct) {
-                    score++
+        //         if (saveds === q.correct) {
+        //             score++
 
-                } else if (saveds != q.correct && savedAnswers[i] !== null) {
-                    galatAns++
-                }
+        //         } else if (saveds != q.correct && savedAnswers[i] !== null) {
+        //             galatAns++
+        //         }
 
-            }
+        //     }
 
-        });
+        // });
+        // localStorage.setItem("scoreKitna", score)
+        // localStorage.setItem("galatKitna", galatAns)
+        // localStorage.setItem("unattemp", unattempted)
+        scoreSaver()
+        unattempted = total - (score + galatAns)
+        let percent = (score / total) * 100
+        console.log("percent:", percent);
+
+        localStorage.setItem("percentKitna", percent)
         localStorage.setItem("scoreKitna", score)
         localStorage.setItem("galatKitna", galatAns)
         localStorage.setItem("unattemp", unattempted)
-
 
         location.href = "./result.html"
 
@@ -279,9 +309,14 @@ function timer() {
     countDown.innerHTML = sec
     if (sec <= 0) {
         clearInterval(myInterval)
-        currentQuesNo++
-        sec = 30
-        showQuestion()
+        if (currentQuesNo === quizQuestions.length - 1) {
+            clearInterval(myInterval)
+        } else {
+            currentQuesNo++
+            sec = 3
+            showQuestion()
+        }
+
     }
 }
 
