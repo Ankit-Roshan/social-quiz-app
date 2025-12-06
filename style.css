@@ -307,3 +307,61 @@ font-weight: bold;
 }
 
 }
+
+
+
+
+@media screen and (min-width: 1000px) {
+    /* Your styles for bigger screens go here */
+.container {
+    width: 35vw;
+    height: 85.5vh;
+
+   
+}
+
+.optContainer {
+    gap: 1px;
+    margin: 3px 6px;
+    width: 95%;
+    /* padding-bottom: 1.3rem; */
+}
+
+
+.questions {
+    background-image: url("./images/Abstract.jpg");
+    color: white;
+    height: 18vh;
+    width: 92.5%;
+   font-size: 1rem;
+}
+
+
+.whichQues p {
+    /* background: yellow; */
+    width: 3.2rem;
+    margin-bottom: 1rem;
+   
+}
+
+.timeWala {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    height: 1.4rem;
+    width: 3.3rem;
+    font-size: 1.2rem;
+    
+
+}
+
+#submit {
+
+    margin-right: 0.8rem;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    width: 5rem;
+    height: 2rem;
+
+}
+
+}
