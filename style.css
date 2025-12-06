@@ -1,3 +1,7 @@
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -22,8 +26,8 @@ body {
     align-items: center;
     flex-direction: column;
     min-height: 400px;
-    width: 50vw;
-    height: 90vh;
+    width: 80vw;
+    height: 70vh;
     background-color: white;
     border-radius: 15px;
     box-shadow: 2px 10px 18px 6px rgb(15, 2, 15);
@@ -54,7 +58,7 @@ body {
 .whichQues p {
     /* background: yellow; */
     width: 3.2rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 2rem;
     margin-left: 1rem;
     border: 3px solid rgb(53, 60, 161);
     border-radius: 8px;
@@ -85,18 +89,18 @@ body {
 
     margin-right: 0.8rem;
     margin-top: 0.5rem;
-    background: #076d0e;
+    background: white;
     font-size: 1.1rem;
     font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(11, 79, 11);
     width: 5rem;
     height: 2.6rem;
     border-radius: 10px;
-    border: 1.5px solid black;
-    transition: 0.3s ease;
+    border: 2.8px solid rgb(5, 77, 5);
+    /* transition: 0.1s ease; */
     /* box-shadow: 10 4px 10px rgba(16,185,129,0.3); */
     cursor: pointer;
 
@@ -104,7 +108,10 @@ body {
 }
 
 #submit:hover {
-    background: #096822;
+    /* background: #096822;
+    color: white; */
+    border: 2.8px solid rgb(5, 77, 5);
+
     transform: scale(1.02);
     /* box-shadow: 0 6px 18px rgba(5, 150, 105, 0.45); */
 }
@@ -117,14 +124,14 @@ body {
 
 
 
-.quesBox {
-    /* background: #211e1e; */
+/* .quesBox {
+    background: #211e1e;
     width: 92.5%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-}
+} */
 
 .questions {
     background-image: url("./images/Abstract.jpg");
@@ -151,7 +158,8 @@ body {
     /* background: yellow; */
     display: flex;
     flex-direction: column;
-    margin: 6px 6px;
+    gap: 3px;
+    margin: 26px 6px;
     width: 95%;
     padding-bottom: 1.3rem;
 }
@@ -163,10 +171,11 @@ body {
 .optContainer label {
     background: white;
     text-align: center;
-
+    font-size: 1.2rem;
+font-weight: bold;
     box-shadow: 0px 0px 4px 1px rgb(128, 123, 123);
     padding: 8px;
-    border: 0.6px solid black;
+    border: 1.5px solid black;
     border-radius: 20px;
     transition: 0.5s;
     transform: scale(1);
@@ -242,4 +251,62 @@ body {
     /* background: peru; */
     display: flex;
     justify-content: center;
+}
+@media screen and (min-width: 1280px) {
+    /* Your styles for bigger screens go here */
+.container {
+    width: 35vw;
+    height: 85.5vh;
+
+   
+}
+
+.optContainer {
+    gap: 1px;
+    margin: 3px 6px;
+    width: 95%;
+    /* padding-bottom: 1.3rem; */
+}
+
+
+.questions {
+    background-image: url("./images/Abstract.jpg");
+    color: white;
+    height: 18vh;
+    width: 92.5%;
+   font-size: 1rem;
+}
+
+
+.whichQues p {
+    /* background: yellow; */
+    width: 3.2rem;
+    margin-bottom: 1rem;
+   
+}
+
+.timeWala {
+    /* background: skyblue; */
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    height: 1.4rem;
+    width: 3.3rem;
+    color: rgb(12, 12, 103);
+    font-size: 1.2rem;
+    
+
+}
+
+#submit {
+
+    margin-right: 0.8rem;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    width: 5rem;
+    height: 2rem;
+  
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
 }
