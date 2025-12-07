@@ -68,6 +68,7 @@ body {
 
 /* Report Section */
 .report {
+    /* background: yellowgreen; */
     width: 80vw;
     margin-top: 15px;
     padding: 15px;
@@ -91,7 +92,8 @@ body {
 
 /* Performance message */
 .performanceKeysa {
-    margin-top: 12px;
+    /* background: yellowgreen; */
+    margin-top: 8px;
     font-size: 18px;
     font-weight: 600;
 }
@@ -140,11 +142,12 @@ body {
 }
 
 .longRow {
+    background: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 15px 10px;
+    padding: 12px 10px;
     border-bottom: 1px solid #d4d0d0;
     font-family: Arial, sans-serif;
 }
@@ -172,8 +175,8 @@ body {
     color: #000;
 }
 .perform{
-    /* background: #000; */
-    height: 6rem;
+    background: #000;
+    height: 3.5rem;
     text-align: center;
     display: flex;
     justify-content: center;

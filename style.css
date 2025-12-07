@@ -54,6 +54,7 @@ margin-top: 2rem;
 
 .whichQues p {
     /* background: yellow; */
+    padding-top: 2px 0px 2px 0px;
     width: 3.2rem;
     margin-bottom: 2rem;
     margin-left: 1rem;
@@ -121,14 +122,14 @@ margin-top: 2rem;
 
 
 
-/* .quesBox {
-    background: #211e1e;
+.quesBox {
+    /* background: #211e1e; */
     width: 92.5%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-} */
+}
 
 .questions {
     background-image: url("./images/Abstract.jpg");

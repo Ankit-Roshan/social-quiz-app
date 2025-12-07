@@ -139,7 +139,7 @@ quesAbhi.innerHTML = currentQuesNo+1
     });
 
     clearInterval(myInterval);
-    sec = 3;
+    sec = 19;
     myInterval = setInterval(timer, 1000);
 
 
@@ -313,7 +313,7 @@ function timer() {
             clearInterval(myInterval)
         } else {
             currentQuesNo++
-            sec = 3
+            sec = 19
             showQuestion()
         }
 
