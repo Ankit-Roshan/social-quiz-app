@@ -27,6 +27,7 @@ body {
     color: #333;
 }
 .topBoard{
+  
     /* background: #000; */
     display: flex;
     justify-content: center;
@@ -36,10 +37,23 @@ body {
     width: 84vw;
     /* border: 1px solid black; */
     border-radius: 8px;
-    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
-    /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
-    /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); */
+    box-shadow: 8px -2px 18px 6px rgb(15, 2, 15);
+  /* box-shadow: 8px -2px 18px 6px rgba(15, 2, 15, 0.3); */
+    animation: floatCard 3s ease-in-out infinite;
+  
 }
+
+@keyframes floatCard {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+.scrBoard:hover {
+    transform: scale(1.03);
+    box-shadow: 10px 5px 25px rgba(0, 0, 0, 0.25);
+    transition: 0.4s ease;
+}
+
 #point1{
   font-size: 40px;
     font-weight: 700;
@@ -53,13 +67,14 @@ body {
 
 }
 .finalScore {
+    /* background: #000; */
     font-size: 40px;
     font-weight: 700;
     color: #007bff;
 }
 
 .score {
-
+/* background: #000; */
     font-size: 18px;
     font-weight: 500;
     color: #444;
@@ -142,7 +157,7 @@ body {
 }
 
 .longRow {
-    background: #000;
+    /* background: #000; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -175,7 +190,7 @@ body {
     color: #000;
 }
 .perform{
-    background: #000;
+    /* background: #000; */
     height: 3.5rem;
     text-align: center;
     display: flex;

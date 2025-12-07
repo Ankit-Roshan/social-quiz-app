@@ -13,6 +13,9 @@
     <h1 class="title">Select Quiz Category</h1>
 
     <div class="container">
+        <a href="questions.html?category=gk" class="box" onclick="savekar('gk')">
+            <h2>CArs</h2>
+        </a>
 
         <a href="questions.html?category=gk" class="box" onclick="savekar('gk')">
             <h2>General Knowledge</h2>
@@ -32,11 +35,11 @@
         <!-- <script src="newScript.js"></script>
         <script src="script.js"></script> -->
         <script>
-           function savekar(catName){
-            localStorage.setItem("selectedCat",catName)
-           } 
+            function savekar(catName) {
+                localStorage.setItem("selectedCat", catName)
+            } 
         </script>
 
 </body>
 
-</html> 
+</html>
