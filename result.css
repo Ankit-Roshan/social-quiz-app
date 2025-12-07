@@ -28,17 +28,25 @@ body {
 }
 .topBoard{
   
-    /* background: #000; */
+
+    /* background: #000;
     display: flex;
-    justify-content: center;
-}
-.scrBoard{
-    background: rgb(234, 234, 230);
+    justify-content: center; */
+
+  background: rgb(234, 234, 230);
     width: 84vw;
     /* border: 1px solid black; */
     border-radius: 8px;
     box-shadow: 8px -2px 18px 6px rgb(15, 2, 15);
-  /* box-shadow: 8px -2px 18px 6px rgba(15, 2, 15, 0.3); */
+
+}
+.scrBoard{
+    background: rgb(234, 234, 230);
+    width: 45vw;
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    /* box-shadow: 8px -2px 18px 6px rgb(15, 2, 15); */
+  box-shadow: 8px -2px 18px 6px rgba(15, 2, 15, 0.3);
     animation: floatCard 3s ease-in-out infinite;
   
 }
