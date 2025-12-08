@@ -101,11 +101,11 @@
     <script>
 
         let categoryNam = localStorage.getItem("selectedCat")
-console.log(categoryNam);
+        console.log(categoryNam);
 
-        if(categoryNam==="cars"){
-document.querySelector(".winPhoto").src = "images/carDP.jpg"
-}
+        if (categoryNam === "cars") {
+            document.querySelector(".winPhoto").src = "images/carDP.jpg"
+        }
 
         let totalQues = document.querySelectorAll(".totalQues")
         totalQues.forEach(tq => {
