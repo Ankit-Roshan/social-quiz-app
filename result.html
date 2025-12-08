@@ -28,11 +28,18 @@
     <div class="containerScore">
 
         <div class="topBoard">
+            <div class="whichCat">
+                <img src="" alt="">
+            </div>
+
             <div class="scrBoard">
                 <p>Score</p>
                 <p><span class="finalScore" id="point1"></span></p>
                 <p class="score">OUT OF <span class="totalQues"></span></p>
 
+            </div>
+            <div class="downloadSec">
+                <img src="" alt="">
             </div>
         </div>
 
@@ -92,6 +99,10 @@
 
     </div>
     <script>
+
+        let categoryNam = localStorage.getItem("selectedCat")
+
+
         let totalQues = document.querySelectorAll(".totalQues")
         totalQues.forEach(tq => {
             tq.innerHTML = localStorage.getItem("totalKitna")
@@ -111,7 +122,8 @@
 
         let percenta = document.querySelectorAll(".percent")
         percenta.forEach(pr => {
-            pr.innerHTML = localStorage.getItem("percentKitna") + " %"
+            let p = parseFloat(localStorage.getItem("percentKitna"));
+            pr.innerHTML = p.toFixed(1) + " %";
         });
         let finalPercent = localStorage.getItem("percentKitna")
         console.log(finalPercent);

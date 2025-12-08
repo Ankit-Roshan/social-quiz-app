@@ -29,15 +29,26 @@ body {
 .topBoard{
   
 
-    /* background: #000;
+    /* background: #000; */
     display: flex;
-    justify-content: center; */
+    justify-content: center;
 
   background: rgb(234, 234, 230);
     width: 84vw;
     /* border: 1px solid black; */
     border-radius: 8px;
     box-shadow: 8px -2px 18px 6px rgb(15, 2, 15);
+
+}
+.whichCat{
+    background: #000;
+    width: 18vw;
+    margin: 1rem;
+}
+.downloadSec{
+      background: #000;
+    width: 18vw;
+    margin: 1rem;
 
 }
 .scrBoard{
@@ -47,15 +58,11 @@ body {
     border-radius: 8px;
     /* box-shadow: 8px -2px 18px 6px rgb(15, 2, 15); */
   box-shadow: 8px -2px 18px 6px rgba(15, 2, 15, 0.3);
-    animation: floatCard 3s ease-in-out infinite;
+    /* animation: floatCard 3s ease-in-out infinite; */
   
 }
 
-@keyframes floatCard {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
+
 .scrBoard:hover {
     transform: scale(1.03);
     box-shadow: 10px 5px 25px rgba(0, 0, 0, 0.25);
@@ -63,6 +70,7 @@ body {
 }
 
 #point1{
+    
   font-size: 40px;
     font-weight: 700;
     color: #007bff;
@@ -72,14 +80,25 @@ body {
     padding-right: 1.8rem;
     /* box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.28); */
     border-radius: 3px;
+    animation: floatCard 3s ease-in-out infinite;
+
 
 }
+@keyframes floatCard {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
 .finalScore {
     /* background: #000; */
     font-size: 40px;
     font-weight: 700;
     color: #007bff;
+
 }
+
+
 
 .score {
 /* background: #000; */
@@ -215,6 +234,12 @@ body {
 
 
 @media screen and (min-width: 1000px) {
+
+    .topBoard{
+    width: 40vw;
+
+    }
+
     .report {
     width: 38vw;
     margin-top: 15px;

@@ -177,6 +177,7 @@ font-weight: bold;
     border-radius: 20px;
     transition: 0.5s;
     transform: scale(1);
+    cursor: pointer;
     /* default scale */
 }
 
@@ -197,6 +198,7 @@ font-weight: bold;
 #nextBtn {
     padding: 10px;
     width: 7.8rem;
+    cursor: pointer;
 
     border: none;
     background-color: purple;
@@ -215,6 +217,7 @@ font-weight: bold;
 #backBtn {
     padding: 10px;
     width: 7.8rem;
+    cursor: pointer;
 
     border: none;
     background-color: rgb(37, 55, 135);

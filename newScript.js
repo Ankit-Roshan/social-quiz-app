@@ -1,4 +1,132 @@
 const allQuestions = {
+
+cars: [
+  {
+    question: "What does the term horsepower actually measure in a vehicle?",
+    opt1: "Engine heat output",
+    opt2: "Fuel burning rate",
+    opt3: "Work or power produced",
+    opt4: "Wheel rotation speed",
+    correct: "opt3"
+  },
+  {
+    question: "What is the main difference between a turbocharger and a supercharger?",
+    opt1: "Turbo uses exhaust",
+    opt2: "Supercharger uses fuel",
+    opt3: "Turbo cools engine",
+    opt4: "Supercharger lowers rpm",
+    correct: "opt1"
+  },
+  {
+    question: "What does RPM redline on a tachometer indicate?",
+    opt1: "Optimal shift point",
+    opt2: "Maximum safe rpm",
+    opt3: "Engine idle speed",
+    opt4: "Fuel cutoff range",
+    correct: "opt2"
+  },
+  {
+    question: "Why do sports cars often use rear-wheel drive instead of front-wheel drive?",
+    opt1: "Better fuel economy",
+    opt2: "Cheaper to build",
+    opt3: "Improved power delivery",
+    opt4: "Less tire wear",
+    correct: "opt3"
+  },
+  {
+    question: "What is the purpose of a limited-slip differential?",
+    opt1: "Reduce engine noise",
+    opt2: "Balance fuel mixture",
+    opt3: "Improve traction balance",
+    opt4: "Increase steering angle",
+    correct: "opt3"
+  },
+  {
+    question: "What does ABS prevent during hard braking?",
+    opt1: "Engine overheating",
+    opt2: "Brake pad wear",
+    opt3: "Wheel lock-up",
+    opt4: "Steering vibration",
+    correct: "opt3"
+  },
+  {
+    question: "Why do electric cars not require traditional gearboxes?",
+    opt1: "Engines rotate slower",
+    opt2: "Motors give constant torque",
+    opt3: "Batteries last longer",
+    opt4: "They use CVT only",
+    correct: "opt2"
+  },
+  {
+    question: "What is the function of a dual-clutch transmission (DCT)?",
+    opt1: "Reduce engine load",
+    opt2: "Shift gears automatically",
+    opt3: "Enable faster gear shifts",
+    opt4: "Improve fuel cooling",
+    correct: "opt3"
+  },
+  {
+    question: "What is the main difference between a 2-stroke and a 4-stroke engine?",
+    opt1: "Fuel type used",
+    opt2: "Number of pistons",
+    opt3: "Power cycle strokes",
+    opt4: "Gearbox requirement",
+    correct: "opt3"
+  },
+  {
+    question: "What happens when an engine is naturally aspirated?",
+    opt1: "Uses turbo pressure",
+    opt2: "Air enters by vacuum",
+    opt3: "Runs on electric power",
+    opt4: "Requires dual injectors",
+    correct: "opt2"
+  },
+  {
+    question: "What does displacement of an engine mean?",
+    opt1: "Fuel tank volume",
+    opt2: "Air-fuel chamber size",
+    opt3: "Cylinder volume swept",
+    opt4: "Total engine weight",
+    correct: "opt3"
+  },
+  {
+    question: "Why do some engines use multiple cylinders?",
+    opt1: "Reduce vehicle cost",
+    opt2: "Improve smooth power",
+    opt3: "Lower fuel usage",
+    opt4: "Reduce emissions only",
+    correct: "opt2"
+  },
+  {
+    question: "What is the purpose of a catalytic converter?",
+    opt1: "Increase top speed",
+    opt2: "Reduce toxic emissions",
+    opt3: "Boost engine torque",
+    opt4: "Decrease fuel pressure",
+    correct: "opt2"
+  },
+  {
+    question: "What makes a V8 engine sound deeper than an inline-4 engine?",
+    opt1: "Larger turbo system",
+    opt2: "More exhaust pulses",
+    opt3: "Different fuel ratio",
+    opt4: "Shorter exhaust pipe",
+    correct: "opt2"
+  },
+  {
+    question: "Why do performance cars use ventilated or drilled brake discs?",
+    opt1: "Reduce brake weight",
+    opt2: "Improve cooling airflow",
+    opt3: "Increase brake size",
+    opt4: "Reduce wheel friction",
+    correct: "opt2"
+  }
+],
+
+
+
+
+
   gk: [
     {
       question: "What is the capital of India?",
