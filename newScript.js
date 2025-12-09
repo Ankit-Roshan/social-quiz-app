@@ -120,10 +120,402 @@ cars: [
     opt3: "Increase brake size",
     opt4: "Reduce wheel friction",
     correct: "opt2"
+  },
+   {
+    question: "Which company produces the Mustang?",
+    opt1: "Chevrolet",
+    opt2: "Ford",
+    opt3: "Dodge",
+    opt4: "Toyota",
+    correct: "opt2"
+  },
+  {
+    question: "What does ABS stand for in cars?",
+    opt1: "Auto Brake System",
+    opt2: "Anti Bounce System",
+    opt3: "Anti-lock Braking System",
+    opt4: "Auto Balance Setup",
+    correct: "opt3"
+  },
+  {
+    question: "The luxury brand Lexus belongs to which company?",
+    opt1: "Honda",
+    opt2: "Nissan",
+    opt3: "Toyota",
+    opt4: "Hyundai",
+    correct: "opt3"
+  },
+  {
+    question: "Which country is home to BMW?",
+    opt1: "USA",
+    opt2: "Germany",
+    opt3: "Japan",
+    opt4: "France",
+    correct: "opt2"
+  },
+  {
+    question: "What type of car is Lamborghini known for?",
+    opt1: "Sports cars",
+    opt2: "Family cars",
+    opt3: "Electric cars",
+    opt4: "Trucks",
+    correct: "opt1"
+  },
+  {
+    question: "Which fuel is used in most Formula 1 cars?",
+    opt1: "Diesel",
+    opt2: "Petrol",
+    opt3: "Kerosene",
+    opt4: "Ethanol",
+    correct: "opt2"
+  },
+  {
+    question: "Which car company makes the Civic?",
+    opt1: "Toyota",
+    opt2: "Honda",
+    opt3: "Mazda",
+    opt4: "Nissan",
+    correct: "opt2"
+  },
+  {
+    question: "Tesla cars are known for using which technology?",
+    opt1: "Solar power",
+    opt2: "Electric motors",
+    opt3: "Steam engines",
+    opt4: "Hybrid diesel",
+    correct: "opt2"
+  },
+  {
+    question: "What is the top luxury car brand from Germany?",
+    opt1: "Ford",
+    opt2: "Fiat",
+    opt3: "Mercedes-Benz",
+    opt4: "Skoda",
+    correct: "opt3"
+  },
+  {
+    question: "Which Italian car brand uses a prancing horse logo?",
+    opt1: "Ferrari",
+    opt2: "Alfa Romeo",
+    opt3: "Fiat",
+    opt4: "Maserati",
+    correct: "opt1"
   }
 ],
-
-
+fastandfurious: [
+  {
+    question: "Who is the leader of the Toretto crew?",
+    opt1: "Dominic Toretto",
+    opt2: "Brian O’Conner",
+    opt3: "Luke Hobbs",
+    opt4: "Han Lue",
+    correct: "opt1"
+  },
+  {
+    question: "Who started as an undercover cop in the crew?",
+    opt1: "Roman Pearce",
+    opt2: "Brian O’Conner",
+    opt3: "Tej Parker",
+    opt4: "Little Nobody",
+    correct: "opt2"
+  },
+  {
+    question: "Who is known for jokes, money, and flashy cars?",
+    opt1: "Roman Pearce",
+    opt2: "Han Lue",
+    opt3: "Tej Parker",
+    opt4: "Dom Toretto",
+    correct: "opt1"
+  },
+  {
+    question: "Which hacker joined the team in Furious 7?",
+    opt1: "Cipher",
+    opt2: "Ramsey",
+    opt3: "Elle",
+    opt4: "Monica",
+    correct: "opt2"
+  },
+  {
+    question: "What engine setup is in Dom’s 1970 Charger?",
+    opt1: "Massive Supercharger",
+    opt2: "Twin Turbo V8",
+    opt3: "N/A V6",
+    opt4: "EcoBoost I4",
+    correct: "opt1"
+  },
+  {
+    question: "What is Han’s RX-7 VeilSide body kit called?",
+    opt1: "Fortune Kit",
+    opt2: "Pandem Kit",
+    opt3: "Vertex Kit",
+    opt4: "TRD Aero",
+    correct: "opt1"
+  },
+  {
+    question: "What muscle car does Letty drive in Fast 6?",
+    opt1: "Dodge SRT8",
+    opt2: "Plymouth GTX",
+    opt3: "Chevelle SS",
+    opt4: "Ford Torino",
+    correct: "opt1"
+  },
+  {
+    question: "What car do Dom and Brian use in the vault heist?",
+    opt1: "Dodge Charger",
+    opt2: "Ford GT40",
+    opt3: "Nissan GTR",
+    opt4: "Toyota Supra",
+    correct: "opt1"
+  },
+  {
+    question: "What armored vehicle does Hobbs’ team use?",
+    opt1: "Gurkha Truck",
+    opt2: "Urus SUV",
+    opt3: "AMG G63",
+    opt4: "Raptor APC",
+    correct: "opt1"
+  },
+  {
+    question: "What blue-white car does Brian drive in Furious 7?",
+    opt1: "Nissan GT-R R35",
+    opt2: "Subaru WRX STi",
+    opt3: "Lancer Evo IX",
+    opt4: "Porsche GT3",
+    correct: "opt1"
+  },
+  {
+    question: "What car does Sean drive as DK in Tokyo Drift?",
+    opt1: "Nissan 350Z",
+    opt2: "GT-R R34",
+    opt3: "Mazda RX-7",
+    opt4: "Toyota 86",
+    correct: "opt1"
+  },
+  {
+    question: "What nitrous system does Dom use in Fast & Furious 4?",
+    opt1: "Dual NOS Bottles",
+    opt2: "Dry Shot Kit",
+    opt3: "Water-Meth Kit",
+    opt4: "EcoBoost Boosters",
+    correct: "opt1"
+  },
+  {
+    question: "Which luxury brand is Roman associated with?",
+    opt1: "Bugatti",
+    opt2: "Lamborghini",
+    opt3: "Rolls-Royce",
+    opt4: "Bentley",
+    correct: "opt2"
+  },
+  {
+    question: "What feature does Dom’s Ice Charger have for icy terrain?",
+    opt1: "Reinforced Spikes",
+    opt2: "Magnetic Tires",
+    opt3: "Ice Studded Grip",
+    opt4: "Snow Tracks",
+    correct: "opt3"
+  },
+  {
+    question: "Brian’s R34 livery is inspired by which style?",
+    opt1: "Nismo Theme",
+    opt2: "Greddy Style",
+    opt3: "Mishimoto Wrap",
+    opt4: "Sparco Pattern",
+    correct: "opt2"
+  },
+  {
+    question: "Which supercar is hacked by Tej in Fast Five?",
+    opt1: "Porsche GT3",
+    opt2: "Lamborghini Murciélago",
+    opt3: "Dodge Charger",
+    opt4: "Ford GT",
+    correct: "opt2"
+  },
+  {
+    question: "What car does Jakob Toretto drive in F9?",
+    opt1: "Ford Mustang GT",
+    opt2: "Nissan GT-R",
+    opt3: "Camaro ZL1",
+    opt4: "Supra GR",
+    correct: "opt3"
+  },
+  {
+    question: "What tech powers Cipher’s Zombie Cars?",
+    opt1: "Remote Hacking",
+    opt2: "AI Swarm Control",
+    opt3: "Neural Overdrive",
+    opt4: "GPS Hijacking",
+    correct: "opt1"
+  },
+  {
+    question: "What makes the Lykan HyperSport unique?",
+    opt1: "Diamond Headlights",
+    opt2: "Triple Turbo V8",
+    opt3: "Gold Pistons",
+    opt4: "Quad Motors",
+    correct: "opt1"
+  },
+  {
+    question: "What allows Dom’s Charger to wheelie?",
+    opt1: "Massive Torque",
+    opt2: "Soft Rear Springs",
+    opt3: "Short Gear Ratio",
+    opt4: "Nitrous Boost",
+    correct: "opt1"
+  },
+  {
+    question: "What nitrous system is seen most in early movies?",
+    opt1: "NOS Wet Shot",
+    opt2: "Turbo Nitrous Mix",
+    opt3: "Nitro Ox Boost",
+    opt4: "Eco Nitrous Kit",
+    correct: "opt1"
+  },
+  {
+    question: "What engine layout powers Brian’s Evo IX?",
+    opt1: "Inline-4 Turbo",
+    opt2: "V6 Twin Turbo",
+    opt3: "Flat-4 Boxer",
+    opt4: "Inline-5 Turbo",
+    correct: "opt1"
+  },
+  {
+    question: "What drivetrain does Brian’s WRX STi have?",
+    opt1: "AWD System",
+    opt2: "RWD Setup",
+    opt3: "FWD Layout",
+    opt4: "Hybrid AWD",
+    correct: "opt1"
+  },
+  {
+    question: "Which car does Dom use for the skyscraper jump?",
+    opt1: "Lykan HyperSport",
+    opt2: "Nissan GT-R",
+    opt3: "Dodge Charger",
+    opt4: "Lamborghini Sesto",
+    correct: "opt1"
+  },
+  {
+    question: "What suspension does Letty’s Rally Fighter have?",
+    opt1: "Long-Travel Offroad",
+    opt2: "Air Ride Bags",
+    opt3: "Sport Coilovers",
+    opt4: "Hydraulic Lift",
+    correct: "opt1"
+  },
+  {
+    question: "Which car races the submarine in Fate of the Furious?",
+    opt1: "Dodge Ice Charger",
+    opt2: "Lamborghini Murciélago",
+    opt3: "Subaru WRX",
+    opt4: "Bentley GT3",
+    correct: "opt1"
+  },
+  {
+    question: "What car does Tej use in the safe-drag scene?",
+    opt1: "Nissan Skyline",
+    opt2: "Honda NSX",
+    opt3: "Dodge Charger",
+    opt4: "Ford Bronco",
+    correct: "opt3"
+  },
+  {
+    question: "Which car does Han drift through Shibuya crossing?",
+    opt1: "Mazda RX-7",
+    opt2: "Nissan 350Z",
+    opt3: "Toyota Supra",
+    opt4: "Nissan Silvia",
+    correct: "opt1"
+  },
+  {
+    question: "What classic muscle car is Dom’s signature ride?",
+    opt1: "1970 Dodge Charger",
+    opt2: "Chevelle SS",
+    opt3: "Camaro Z28",
+    opt4: "Ford Mustang GT",
+    correct: "opt1"
+  },
+  {
+    question: "What drift technique is shown repeatedly in Tokyo Drift?",
+    opt1: "Power Over Drift",
+    opt2: "Scandinavian Flick",
+    opt3: "Clutch Kick Drift",
+    opt4: "E-Brake Drift",
+    correct: "opt4"
+  },
+  {
+    question: "Which car does Brian use during the train heist?",
+    opt1: "Nissan GT-R",
+    opt2: "Ford GT40",
+    opt3: "Toyota Supra",
+    opt4: "Lancer Evo",
+    correct: "opt2"
+  },
+  {
+    question: "Which off-road car does Dom use in Fast & Furious 4 desert chase?",
+    opt1: "Chevelle SS",
+    opt2: "Plymouth GTX",
+    opt3: "Buick GNX",
+    opt4: "Offroad Charger",
+    correct: "opt4"
+  },
+  {
+    question: "What car does Ramsey drop from the plane in Furious 7?",
+    opt1: "Lykan HyperSport",
+    opt2: "Subaru WRX",
+    opt3: "Dodge Charger",
+    opt4: "Range Rover",
+    correct: "opt2"
+  },
+  {
+    question: "What feature helps Dom’s Charger handle huge torque?",
+    opt1: "Reinforced Chassis",
+    opt2: "Drag Radials",
+    opt3: "Strengthened Axles",
+    opt4: "Custom Driveshaft",
+    correct: "opt1"
+  },
+  {
+    question: "What special transmission do Roman’s cars often show?",
+    opt1: "Dual-Clutch Gearbox",
+    opt2: "CVT System",
+    opt3: "Sequential Shifter",
+    opt4: "4-Speed Auto",
+    correct: "opt3"
+  },
+  {
+    question: "What mod helps Han maintain long drifts?",
+    opt1: "Sticky Tires",
+    opt2: "Hydraulic Handbrake",
+    opt3: "Widebody Kit",
+    opt4: "Extra Fuel Load",
+    correct: "opt2"
+  },
+  {
+    question: "What tuning part is common in Dom’s race cars?",
+    opt1: "Nitrous Bottles",
+    opt2: "EcoBoost Turbos",
+    opt3: "Cold Air Intake",
+    opt4: "Sports Exhaust",
+    correct: "opt1"
+  },
+  {
+    question: "What muscle car appears in Dom’s Cuba race?",
+    opt1: "Chevy Fleetline",
+    opt2: "Dodge Charger",
+    opt3: "Ford Fairlane",
+    opt4: "Plymouth Roadrunner",
+    correct: "opt1"
+  },
+  {
+    question: "What car does Han talk about importing from Tokyo?",
+    opt1: "Nissan Silvia",
+    opt2: "Mazda RX-7",
+    opt3: "Toyota Chaser",
+    opt4: "Nissan Skyline",
+    correct: "opt3"
+  }
+],
 
 
 

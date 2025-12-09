@@ -21,6 +21,10 @@
             <h2>General Knowledge</h2>
         </a>
 
+        <a href="questions.html?category=fastandfurious" class="box" onclick="savekar('fastandfurious')">
+            <h2>Fast & Furious</h2>
+        </a>
+
         <a href="questions.html?category=science" class="box" onclick="savekar('science')">
             <h2>Science</h2>
         </a>
@@ -35,6 +39,7 @@
         <!-- <script src="newScript.js"></script>
         <script src="script.js"></script> -->
         <script>
+            
             function savekar(catName) {
                 localStorage.setItem("selectedCat", catName)
             } 
