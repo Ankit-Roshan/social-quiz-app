@@ -30,6 +30,7 @@
         <div class="topBoard">
             <div class="whichCat">
                 <img src="./images/Abstract.jpg" alt="" class="winPhoto">
+                <p class="winnerNam"></p>
             </div>
 
             <div class="scrBoard">
@@ -99,6 +100,12 @@
 
     </div>
     <script>
+
+
+
+let winner = localStorage.getItem("enteredName")
+let winnerNam =document.querySelector(".winnerNam")
+winnerNam.innerHTML = winner
 
         let categoryNam = localStorage.getItem("selectedCat")
         console.log(categoryNam);
