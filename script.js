@@ -139,8 +139,12 @@ function showQuestion() {
         l.style.backgroundColor = "";
         l.style.color = "black"
     });
-    allLabels.forEach(o => o.disabled = false);
-    allInputss.forEach(ip => ip.disabled = false);
+
+   
+         allLabels.forEach(o => o.disabled = false);
+        allInputss.forEach(ip => ip.disabled = false);
+    
+
 
     clearInterval(myInterval);
     sec = 19;
@@ -153,6 +157,8 @@ function showQuestion() {
         let savedInput = document.getElementById(saved);
         if (savedInput) {
             savedInput.checked = true;
+        allInputss.forEach(ip => ip.disabled = true);
+
         }
         checkAnswer()
     }
