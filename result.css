@@ -40,32 +40,66 @@ body {
 }
 
 .whichCat {
-    background: #000;
-    height: 20vw;
-    width: 20vw;
+    background: #c3aaaa;
+    height: 4.5rem;
+    width: 4.5rem;
     margin: 1rem;
     border-radius: 50%;
- position: relative;
- top: 40px;
+    position: relative;
+    top: 20px;
     /* box-shadow: 2px 5px 18px 6px rgb(15, 2, 15); */
     /* border: 4px solid #5D3FD3; */
 }
-.whichCat img{
- height: 100%;
+
+.whichCat img {
+    height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
-    
+
+
+}
+
+.winnerNam {
+    margin-top: 0.5rem;
+    /* background: #ba7070; */
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .downloadSec {
-    background: #000;
+    /* background: #000; */
     width: 18vw;
     margin: 1rem;
     border-radius: 8px;
 
+
 }
+
+.downloadSec img {
+    margin-top: 2rem;
+    height: 3.3rem;
+}
+
+.dnld {
+    background: #0fa360;
+    height: 2rem;
+    width: 5.2rem;
+    border-radius: 8px;
+    border: 2px solid black;
+    box-shadow: 8px -2px 18px 6px rgba(15, 2, 15, 0.3);
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .scrBoard {
     background: rgb(246, 246, 226);
@@ -158,7 +192,7 @@ body {
     width: 70%;
 }
 
-/* Performance message */
+
 .performanceKeysa {
     /* background: yellowgreen; */
     margin-top: 8px;
@@ -166,7 +200,6 @@ body {
     font-weight: 600;
 }
 
-/* Button Section */
 .result-actions {
     display: flex;
     justify-content: space-between;
@@ -184,7 +217,7 @@ body {
     transition: 0.3s ease;
 }
 
-/* Home Button */
+
 .homeBtn {
     background-color: #1a7d1d;
     color: white;
@@ -197,7 +230,7 @@ body {
     background-color: #145b16;
 }
 
-/* Retry Button */
+
 .retryBtn {
     background-color: #007bff;
     color: white;

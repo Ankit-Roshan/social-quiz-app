@@ -40,7 +40,9 @@
 
             </div>
             <div class="downloadSec">
-                <img src="" alt="">
+
+                <img src="./images/download.png" alt="">
+                <p class="dnld">Download</p>
             </div>
         </div>
 
@@ -101,13 +103,17 @@
     </div>
     <script>
 
+        let downloadBtnm =document.querySelector(".dnld")
+        downloadBtnm.addEventListener("click", ()=>{
+            location.href ="certificate.html"
+        })
 
-
-let winner = localStorage.getItem("enteredName")
-let winnerNam =document.querySelector(".winnerNam")
-winnerNam.innerHTML = winner
+        // let winner = localStorage.getItem("enteredName")
+        let winnerNam = document.querySelector(".winnerNam")
 
         let categoryNam = localStorage.getItem("selectedCat")
+        winnerNam.innerHTML = categoryNam.toUpperCase() + " Quiz"
+
         console.log(categoryNam);
 
         if (categoryNam === "cars") {
@@ -134,7 +140,7 @@ winnerNam.innerHTML = winner
         let percenta = document.querySelectorAll(".percent")
         percenta.forEach(pr => {
             let p = parseFloat(localStorage.getItem("percentKitna"));
-            pr.innerHTML = p.toFixed(1) + " %";
+            pr.innerHTML = p.toFixed(0) + " %";
         });
         let finalPercent = localStorage.getItem("percentKitna")
         console.log(finalPercent);

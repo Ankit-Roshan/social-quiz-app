@@ -15,7 +15,7 @@
 
     <p class="cert-subtitle">Awarded to</p>
 
-    <h1 id="userName" class="cert-name">Student Name</h1>
+    <h1 id="userName" class="cert-name"></h1>
 
     <p class="cert-desc">
         For scoring <span id="percentValue">95%</span> in the 
@@ -40,6 +40,11 @@
 
 <script>
    
+
+        let winner = localStorage.getItem("enteredName")
+        let userKaNam = document.getElementById("userName")
+        userKaNam.innerHTML = winner
+  
 </script>
 </body>
 </html>
