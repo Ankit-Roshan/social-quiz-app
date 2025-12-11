@@ -1,46 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container{
-            background: #a84b4b;
-            height: 50vh;
-            width: 60vw;
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-        }
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #4b79a1, #283e51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: #ffffff;
+    width: 350px;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    animation: fadeIn 0.8s ease;
+}
+
+.nameWala h2 {
+    /* background: #000; */
+    font-size: 22px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.name{
+    width: 90%;
+    padding: 0.8rem;
+    border: 2px solid #4b79a1;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.name:focus {
+    border-color: #283e51;
+}
+
+.startBtnBox {
+    margin-top: 2rem;
+}
+
+.str{
+    width: 90%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    background: #0b7a21;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.str:hover {
+    background: #08501a;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
     </style>
 </head>
-<body>
- <div class="container">
-    <div class="nameWala">
-        <p>Name: <input class="name" type="text" placeholder="Enter your name"></p>
-    </div>
-    <div class="start">
-        <button class="str">Start</button>
-    </div>
- </div>
- 
- <script>
-    let name = document.querySelector(".name")
-    let start = document.querySelector(".str")
-    
-    start.addEventListener("click",()=>{
-        localStorage.setItem("enteredName",name.value)
-        location.href ="index.html"
-    })
-    
 
- </script>
+<body>
+    <div class="container">
+        <div class="nameWala">
+             <h2>Enter Your Name</h2>
+           <input class="name" type="text" placeholder="Enter your name">
+        </div>
+        <div class="start">
+            <button class="str">Start</button>
+        </div>
+    </div>
+
+    <script>
+        let name = document.querySelector(".name")
+        let start = document.querySelector(".str")
+
+
+
+        start.addEventListener("click", () => {
+            if (name.value.trim() === "") {
+                alert("Please enter your name!");
+                return;
+            }
+
+            localStorage.setItem("enteredName", name.value)
+            location.href = "index.html"
+        })
+
+
+    </script>
 </body>
+
 </html>

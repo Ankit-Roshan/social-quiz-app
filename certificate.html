@@ -1,50 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Certificate Card</title>
-<link rel="stylesheet" href="certificate.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Card</title>
+    <link rel="stylesheet" href="certificate.css">
 </head>
 
 <body>
 
-<div id="certificateCard" class="cert-card">
+    <div id="certificateCard" class="cert-card">
 
-    <h2 class="cert-title">🎉 Certificate</h2>
+        <h2 class="cert-title">🎉 Certificate</h2>
 
-    <p class="cert-subtitle">Awarded to</p>
+        <p class="cert-subtitle">Awarded to</p>
 
-    <h1 id="userName" class="cert-name"></h1>
+        <h1 id="userName" class="cert-name"></h1>
 
-    <p class="cert-desc">
-        For scoring <span id="percentValue">95%</span> in the 
-        <span id="categoryValue">Science</span> Quiz.
-    </p>
+        <p class="cert-desc">
+            For scoring <span id="percentValue">95%</span> in the
+            <span id="categoryValue">Science</span> Quiz.
+        </p>
 
-    <div class="cert-footer">
-        <div class="date-box">
-            <p>Date</p>
-            <span id="dateValue">08 Dec 2025</span>
+        <div class="cert-footer">
+            <div class="date-box">
+                <p>Date</p>
+                <span id="dateValue">08 Dec 2025</span>
+            </div>
+
+            <div class="sign-box">
+                <div class="line"></div>
+                <p>Signature</p>
+            </div>
         </div>
 
-        <div class="sign-box">
-            <div class="line"></div>
-            <p>Signature</p>
-        </div>
     </div>
 
-</div>
 
 
+    <script>
 
-<script>
-   
 
         let winner = localStorage.getItem("enteredName")
         let userKaNam = document.getElementById("userName")
         userKaNam.innerHTML = winner
-  
-</script>
+
+
+        let percentTotal = localStorage.getItem("percentKitna")
+        let percentValue = document.getElementById("percentValue");
+        percentValue.innerHTML = percentTotal + " %"
+
+        let catt = localStorage.getItem("selectedCat")
+        let categoryValue = document.getElementById("categoryValue");
+        categoryValue.innerHTML = catt.toUpperCase()
+
+        let dateSpan = document.getElementById("dateValue");
+
+        let today = new Date();
+
+        let options = { day: "2-digit", month: "short", year: "numeric" };
+
+        dateSpan.innerText = today.toLocaleDateString("en-GB", options);
+
+    </script>
 </body>
+
 </html>
