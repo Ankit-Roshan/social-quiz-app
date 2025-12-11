@@ -98,7 +98,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
+.dnld:hover{
+    transform: scale(1.03);
+    box-shadow: 10px 5px 25px rgba(0, 0, 0, 0.25);
+    transition: 0.4s ease;
+}
+
 
 
 .scrBoard {

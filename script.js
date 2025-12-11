@@ -50,12 +50,14 @@ localStorage.setItem("totalKitna", total)
 
 
 
-let ttlQues =document.querySelector(".ttlQues")
+let ttlQues = document.querySelector(".ttlQues")
 ttlQues.innerHTML = total
 
 allInputss.forEach(inpt => {
     inpt.addEventListener("change", () => {
         savedAnswers[currentQuesNo] = inpt.id
+        allLabels.forEach(o => o.disabled = true);
+        allInputss.forEach(ip => ip.disabled = true);
 
         checkAnswer()
     })
@@ -67,8 +69,8 @@ function showQuestion() {
 
     console.log(currentQuesNo);
     console.log(quizQuestions.length - 1);
-let quesAbhi = document.querySelector(".quesAbhi")
-quesAbhi.innerHTML = currentQuesNo+1
+    let quesAbhi = document.querySelector(".quesAbhi")
+    quesAbhi.innerHTML = currentQuesNo + 1
 
     if (currentQuesNo === quizQuestions.length - 1) {
 
@@ -86,8 +88,8 @@ quesAbhi.innerHTML = currentQuesNo+1
         // localStorage.setItem("unattemp", unattempted)
 
         nextBtn.style.visibility = "visible"
-         nextBtn.style.background ="grey"
-           nextBtn.disabled = true;
+        nextBtn.style.background = "grey"
+        nextBtn.disabled = true;
         //  countDown.style.visibility = "hidden"
 
 
@@ -96,8 +98,8 @@ quesAbhi.innerHTML = currentQuesNo+1
         // console.log("galat", galatAns);
     } else {
         nextBtn.style.visibility = "visible"
-           nextBtn.disabled = false;
-         nextBtn.style.background ="blue"
+        nextBtn.disabled = false;
+        nextBtn.style.background = "blue"
         //  countDown.style.visibility = "visible"
 
 
@@ -137,6 +139,8 @@ quesAbhi.innerHTML = currentQuesNo+1
         l.style.backgroundColor = "";
         l.style.color = "black"
     });
+    allLabels.forEach(o => o.disabled = false);
+    allInputss.forEach(ip => ip.disabled = false);
 
     clearInterval(myInterval);
     sec = 19;
@@ -251,6 +255,8 @@ function checkAnswer() {
     if (selectedOpt.id === correctAns) {
         labelSel.style.backgroundColor = "green"
         labelSel.style.color = "white"
+        // allLabels.forEach(lbl => lbl.disabled=true)
+
 
     } else {
         labelSel.style.backgroundColor = "red"
