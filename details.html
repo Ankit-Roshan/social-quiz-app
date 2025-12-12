@@ -4,115 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="category .css">
     <title>Document</title>
-    <style>
-      * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-body {
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(135deg, #4b79a1, #283e51);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    background: #ffffff;
-    width: 350px;
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    animation: fadeIn 0.8s ease;
-}
-
-.nameWala h2 {
-    /* background: #000; */
-    font-size: 22px;
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-    color: #333;
-}
-
-.name{
-    width: 90%;
-    padding: 0.8rem;
-    border: 2px solid #4b79a1;
-    border-radius: 10px;
-    font-size: 16px;
-    outline: none;
-    transition: 0.3s;
-}
-
-.name:focus {
-    border-color: #283e51;
-}
-
-.startBtnBox {
-    margin-top: 2rem;
-}
-
-.str{
-    width: 90%;
-    padding: 0.8rem;
-    margin-top: 1rem;
-    background: #0b7a21;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.str:hover {
-    background: #08501a;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-    </style>
 </head>
 
 <body>
+
+    <h1 class="title">Select Quiz Category</h1>
+
     <div class="container">
-        <div class="nameWala">
-             <h2>Enter Your Name</h2>
-           <input class="name" type="text" placeholder="Enter your name">
-        </div>
-        <div class="start">
-            <button class="str">Start</button>
-        </div>
-    </div>
+        <a href="questions.html?category=assamHistory" class="box" onclick="savekar('assamHistory')">
+            <h2>Assam History</h2>
+        </a>
 
-    <script>
-        let name = document.querySelector(".name")
-        let start = document.querySelector(".str")
+        <a href="questions.html?category=cars" class="box" onclick="savekar('cars')">
+            <h2>Cars</h2>
+        </a>
+
+        <a href="questions.html?category=cosmos" class="box" onclick="savekar('cosmos')">
+            <h2>Cosmos</h2>
+        </a>
+
+        <a href="questions.html?category=fastandfurious" class="box" onclick="savekar('fastandfurious')">
+            <h2>Fast & Furious</h2>
+        </a>
+
+        <a href="questions.html?category=pokemon" class="box" onclick="savekar('pokemon')">
+            <h2>Pokemon</h2>
+        </a>
+        <a href="questions.html?category=gk" class="box" onclick="savekar('gk')">
+            <h2>General Knowledge</h2>
+        </a>
+
+        <a href="questions.html?category=science" class="box" onclick="savekar('science')">
+            <h2>Science</h2>
+        </a>
 
 
 
-        start.addEventListener("click", () => {
-            if (name.value.trim() === "") {
-                alert("Please enter your name!");
-                return;
-            }
+        
+        <!-- <script src="newScript.js"></script>
+        <script src="script.js"></script> -->
+        <script>
 
-            localStorage.setItem("enteredName", name.value)
-            location.href = "index.html"
-        })
+            function savekar(catName) {
+                localStorage.setItem("selectedCat", catName)
+            } 
+        </script>
 
-
-    </script>
 </body>
 
 </html>
