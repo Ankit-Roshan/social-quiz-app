@@ -73,12 +73,13 @@ body {
 }
 
 .downloadSec {
-    /* background: #000; */
-    width: 18vw;
+    background: #000;
+    width: 30%;
     margin: 1rem;
     border-radius: 8px;
-
-
+    display: flex;
+    flex-direction: column;
+align-items: center;
 }
 
 .downloadSec img {
@@ -94,7 +95,7 @@ body {
     border: 2px solid black;
     box-shadow: 8px -2px 18px 6px rgba(15, 2, 15, 0.3);
     margin-top: 1.5rem;
-    margin-right: 0.5rem;
+    /* margin-right: 1rem; */
     font-size: 1rem;
     display: flex;
     align-items: center;
