@@ -517,6 +517,218 @@ fastandfurious: [
   }
 ],
 
+cosmos : [
+  {
+    question: "What is the main reason stars shine?",
+    opt1: "Nuclear Fusion",
+    opt2: "Cosmic Heat",
+    opt3: "Gas Compression",
+    opt4: "Solar Energy",
+    correct: "opt1"
+  },
+  {
+    question: "What force keeps planets in orbit around a star?",
+    opt1: "Magnetism",
+    opt2: "Gravity",
+    opt3: "Tidal Pull",
+    opt4: "Star Pressure",
+    correct: "opt2"
+  },
+  {
+    question: "What is a black hole’s event horizon?",
+    opt1: "Energy Shield",
+    opt2: "Boundary Edge",
+    opt3: "Gravity Core",
+    opt4: "Dark Ring",
+    correct: "opt2"
+  },
+  {
+    question: "Which planet has the strongest magnetic field?",
+    opt1: "Jupiter",
+    opt2: "Saturn",
+    opt3: "Neptune",
+    opt4: "Earth",
+    correct: "opt1"
+  },
+  {
+    question: "What is the name of our galaxy?",
+    opt1: "Milky Way",
+    opt2: "Andromeda",
+    opt3: "Triangulum",
+    opt4: "Whirlpool",
+    correct: "opt1"
+  },
+  {
+    question: "What causes a supernova explosion?",
+    opt1: "Star Collapse",
+    opt2: "Solar Winds",
+    opt3: "Cosmic Rays",
+    opt4: "Planet Impact",
+    correct: "opt1"
+  },
+  {
+    question: "What is the closest star to Earth after the Sun?",
+    opt1: "Sirius",
+    opt2: "Alpha Centauri",
+    opt3: "Proxima Centauri",
+    opt4: "Vega",
+    correct: "opt3"
+  },
+  {
+    question: "What is a nebula often called?",
+    opt1: "Star Nursery",
+    opt2: "Cosmic Fog",
+    opt3: "Gas Bubble",
+    opt4: "Space Shell",
+    correct: "opt1"
+  },
+  {
+    question: "What is a pulsar?",
+    opt1: "Spinning Neutron Star",
+    opt2: "Mini Black Hole",
+    opt3: "Cold Dying Star",
+    opt4: "Fast Meteor",
+    correct: "opt1"
+  },
+  {
+    question: "What makes a quasar extremely bright?",
+    opt1: "Dust Clouds",
+    opt2: "Black Hole Feeding",
+    opt3: "Star Clusters",
+    opt4: "Nuclear Bursts",
+    correct: "opt2"
+  },
+  {
+    question: "What is the Kuiper Belt?",
+    opt1: "Ice Region",
+    opt2: "Star Field",
+    opt3: "Gas Cloud",
+    opt4: "Dark Zone",
+    correct: "opt1"
+  },
+  {
+    question: "What does the Oort Cloud contain?",
+    opt1: "Frozen Comets",
+    opt2: "Dust Rings",
+    opt3: "Gas Nebulae",
+    opt4: "Mini Planets",
+    correct: "opt1"
+  },
+  {
+    question: "What is the boundary where the Sun’s influence ends?",
+    opt1: "Solar Rim",
+    opt2: "Cosmic Line",
+    opt3: "Heliopause",
+    opt4: "Void Barrier",
+    correct: "opt3"
+  },
+  {
+    question: "What is the main difference between comets and asteroids?",
+    opt1: "Shape Only",
+    opt2: "Orbit Path",
+    opt3: "Icy vs Rocky",
+    opt4: "Size Factor",
+    correct: "opt3"
+  },
+  {
+    question: "What is the largest volcano in the solar system?",
+    opt1: "Olympus Mons",
+    opt2: "Mauna Loa",
+    opt3: "Mount Tharsis",
+    opt4: "Gale Crater",
+    correct: "opt1"
+  },
+  {
+    question: "What causes the northern lights?",
+    opt1: "Cosmic Rays",
+    opt2: "Solar Wind",
+    opt3: "Gravity Waves",
+    opt4: "Deep Cold Air",
+    correct: "opt2"
+  },
+  {
+    question: "What is a star in its earliest stage called?",
+    opt1: "Protostar",
+    opt2: "White Dwarf",
+    opt3: "Nebulite",
+    opt4: "Young Star",
+    correct: "opt1"
+  },
+  {
+    question: "What type of galaxy is the Milky Way?",
+    opt1: "Elliptical",
+    opt2: "Ring Galaxy",
+    opt3: "Spiral Galaxy",
+    opt4: "Irregular",
+    correct: "opt3"
+  },
+  {
+    question: "What happens during a solar eclipse?",
+    opt1: "Earth Blocks Sun",
+    opt2: "Moon Blocks Sun",
+    opt3: "Sun Blocks Moon",
+    opt4: "Sky Turns Blue",
+    correct: "opt2"
+  },
+  {
+    question: "What is the planet’s path around the Sun called?",
+    opt1: "Rotation",
+    opt2: "Orbit",
+    opt3: "Axis Line",
+    opt4: "Curve Trail",
+    correct: "opt2"
+  },
+  {
+    question: "What is the Hubble Telescope used for?",
+    opt1: "Deep Space Imaging",
+    opt2: "Mars Mapping",
+    opt3: "Moon Scanning",
+    opt4: "Solar Tracking",
+    correct: "opt1"
+  },
+  {
+    question: "Which galaxy is closest to the Milky Way?",
+    opt1: "Andromeda",
+    opt2: "Sombrero",
+    opt3: "Cartwheel",
+    opt4: "Pinwheel",
+    correct: "opt1"
+  },
+  {
+    question: "Which planet has the most moons?",
+    opt1: "Jupiter",
+    opt2: "Saturn",
+    opt3: "Neptune",
+    opt4: "Uranus",
+    correct: "opt2"
+  },
+  {
+    question: "Which element is most abundant in stars?",
+    opt1: "Hydrogen",
+    opt2: "Helium",
+    opt3: "Carbon",
+    opt4: "Oxygen",
+    correct: "opt1"
+  },
+  {
+    question: "Which constellation contains the North Star?",
+    opt1: "Ursa Major",
+    opt2: "Ursa Minor",
+    opt3: "Orion",
+    opt4: "Cassiopeia",
+    correct: "opt2"
+  },
+  {
+    question: "Which planet has blue methane clouds?",
+    opt1: "Neptune",
+    opt2: "Uranus",
+    opt3: "Jupiter",
+    opt4: "Saturn",
+    correct: "opt1"
+  }
+],
+
+
 
 
   gk: [

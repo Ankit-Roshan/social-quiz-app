@@ -56,9 +56,9 @@
         userKaNam.innerHTML = winner
 
 
-        let percentTotal = localStorage.getItem("percentKitna")
+        let percentTotal = parseFloat(localStorage.getItem("percentKitna"))
         let percentValue = document.getElementById("percentValue");
-        percentValue.innerHTML = percentTotal + " %"
+        percentValue.innerHTML = percentTotal.toFixed(1) + " %"
 
         let catt = localStorage.getItem("selectedCat")
         let categoryValue = document.getElementById("categoryValue");

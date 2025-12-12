@@ -32,7 +32,7 @@ body {
     justify-content: center;
 
     background: rgb(234, 234, 230);
-    width: 84vw;
+    width: 85.5vw;
     /* border: 1px solid black; */
     border-radius: 8px;
     box-shadow: 8px -2px 18px 6px rgb(15, 2, 15);
@@ -89,7 +89,7 @@ body {
 .dnld {
     background: #0fa360;
     height: 2rem;
-    width: 5.2rem;
+    width: 5rem;
     border-radius: 8px;
     border: 2px solid black;
     box-shadow: 8px -2px 18px 6px rgba(15, 2, 15, 0.3);

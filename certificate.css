@@ -11,6 +11,7 @@ body {
 
 /* CARD STYLE CERTIFICATE */
 .cert-card {
+    height: 43vh;
     width: 380px;
     padding: 25px 25px;
     border-radius: 20px;
