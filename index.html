@@ -13,11 +13,15 @@
     <h1 class="title">Select Quiz Category</h1>
 
     <div class="container">
+        <a href="questions.html?category=assamHistory" class="box" onclick="savekar('assamHistory')">
+            <h2>Assam History</h2>
+        </a>
+
         <a href="questions.html?category=cars" class="box" onclick="savekar('cars')">
             <h2>Cars</h2>
         </a>
 
-      <a href="questions.html?category=cosmos" class="box" onclick="savekar('cosmos')">
+        <a href="questions.html?category=cosmos" class="box" onclick="savekar('cosmos')">
             <h2>Cosmos</h2>
         </a>
 
@@ -25,7 +29,10 @@
             <h2>Fast & Furious</h2>
         </a>
 
-          <a href="questions.html?category=gk" class="box" onclick="savekar('gk')">
+        <a href="questions.html?category=pokemon" class="box" onclick="savekar('pokemon')">
+            <h2>Pokemon</h2>
+        </a>
+        <a href="questions.html?category=gk" class="box" onclick="savekar('gk')">
             <h2>General Knowledge</h2>
         </a>
 
@@ -33,17 +40,13 @@
             <h2>Science</h2>
         </a>
 
-        <a href="questions.html?category=current" class="box" onclick="savekar('current')">
-            <h2>Current Affairs</h2>
-        </a>
 
-        <a href="questions.html?category=english" class="box" onclick="savekar('english')">
-            <h2>English Grammar</h2>
-        </a>
+
+        
         <!-- <script src="newScript.js"></script>
         <script src="script.js"></script> -->
         <script>
-          
+
             function savekar(catName) {
                 localStorage.setItem("selectedCat", catName)
             } 

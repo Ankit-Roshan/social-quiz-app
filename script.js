@@ -266,7 +266,7 @@ function checkAnswer() {
 
     } else {
         labelSel.style.backgroundColor = "red"
-        labelSel.style.color = "black"
+        labelSel.style.color = "white"
 
         labelCrct.style.backgroundColor = "green"
         labelCrct.style.color = "white"

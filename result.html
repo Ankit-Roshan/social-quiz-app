@@ -42,7 +42,7 @@
             <div class="downloadSec">
 
                 <img src="./images/download.png" alt="">
-                <p class="dnld">Download</p>
+                <p class="dnld">View</p>
             </div>
         </div>
 
@@ -118,6 +118,24 @@
 
         if (categoryNam === "cars") {
             document.querySelector(".winPhoto").src = "images/carDP.jpg"
+        }else if(categoryNam === "cosmos"){
+            document.querySelector(".winPhoto").src = "images/midjourney.jpg"
+
+        }else if(categoryNam === "fastandfurious"){
+            document.querySelector(".winPhoto").src = "images/dom.jpg"
+
+        }else if(categoryNam === "pokemon"){
+            document.querySelector(".winPhoto").src = "images/pokeball.jpg"
+
+        }else if(categoryNam === "assamHistory"){
+            document.querySelector(".winPhoto").src = "images/zappi1.jpg"
+
+        }else if(categoryNam === "science"){
+            document.querySelector(".winPhoto").src = "images/science.jpg"
+
+        }else if(categoryNam === "gk"){
+            document.querySelector(".winPhoto").src = "images/gklogo.jpg"
+
         }
 
         let totalQues = document.querySelectorAll(".totalQues")

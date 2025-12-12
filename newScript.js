@@ -864,224 +864,253 @@ cosmos : [
       correct: "opt4"
     }
   ],
-
-  current: [
+ assamHistory : [
+  {
+    question: "Who founded the Ahom kingdom?",
+    opt1: "Sukapha",
+    opt2: "Rudra Singha",
+    opt3: "Bhaskar Varman",
+    opt4: "Naranarayan",
+    correct: "opt1"
+  },
+  {
+    question: "In which year did the Battle of Saraighat occur?",
+    opt1: "1671",
+    opt2: "1615",
+    opt3: "1751",
+    opt4: "1826",
+    correct: "opt1"
+  },
+  {
+    question: "Who led the Ahoms in the Battle of Saraighat?",
+    opt1: "Sukapha",
+    opt2: "Lachit Borphukan",
+    opt3: "Badanchandra",
+    opt4: "Rudra Singha",
+    correct: "opt2"
+  },
+  {
+    question: "Which Mughal general fought at Saraighat?",
+    opt1: "Mir Jumla",
+    opt2: "Shaista Khan",
+    opt3: "Ram Singh",
+    opt4: "Aurangzeb",
+    correct: "opt3"
+  },
+  {
+    question: "Who was the longest-ruling Ahom king?",
+    opt1: "Sukapha",
+    opt2: "Pratap Singha",
+    opt3: "Sudempha",
+    opt4: "Rajeswar Singha",
+    correct: "opt3"
+  },
+  {
+    question: "What was the main capital of the Ahoms?",
+    opt1: "Jorhat",
+    opt2: "Garhgaon",
+    opt3: "Guwahati",
+    opt4: "Sibsagar",
+    correct: "opt2"
+  },
+  {
+    question: "Who started the Moamoria Rebellion?",
+    opt1: "Rangpur rebels",
+    opt2: "Vaishnav monks",
+    opt3: "Moamoria sect",
+    opt4: "Ahom nobles",
+    correct: "opt3"
+  },
+  {
+    question: "Who wrote the ‘Kirtan Ghoxa’?",
+    opt1: "Madhavdev",
+    opt2: "Shankaradeva",
+    opt3: "Hem Saraswati",
+    opt4: "Harihar Bipra",
+    correct: "opt2"
+  },
+  {
+    question: "Who founded the Barduwa Than?",
+    opt1: "Madhavdev",
+    opt2: "Shankaradeva",
+    opt3: "Damodaradeva",
+    opt4: "Aniruddhadeva",
+    correct: "opt2"
+  },
+  {
+    question: "Which Ahom king built the Rang Ghar?",
+    opt1: "Rudra Singha",
+    opt2: "Pratap Singha",
+    opt3: "Siva Singha",
+    opt4: "Gadadhar Singha",
+    correct: "opt3"
+  },
+  {
+    question: "Which language was used in ancient Assam inscriptions?",
+    opt1: "Assamese",
+    opt2: "Pali",
+    opt3: "Sanskrit",
+    opt4: "Prakrit",
+    correct: "opt3"
+  },
+  {
+    question: "When was Assam annexed by the British?",
+    opt1: "1826",
+    opt2: "1857",
+    opt3: "1815",
+    opt4: "1830",
+    correct: "opt1"
+  },
+  {
+    question: "Who led the Phulaguri uprising?",
+    opt1: "Peasants",
+    opt2: "Tea workers",
+    opt3: "Ahom soldiers",
+    opt4: "Local kings",
+    correct: "opt1"
+  },
+  {
+    question: "Which movement in Assam joined Quit India?",
+    opt1: "Nongkrem revolt",
+    opt2: "Phulaguri revolt",
+    opt3: "Azad Assam movement",
+    opt4: "Swadeshi movement",
+    correct: "opt3"
+  },
+  {
+    question: "Who was the first Assamese to join Congress?",
+    opt1: "Gopinath Bordoloi",
+    opt2: "Tarun Ram Phukan",
+    opt3: "Ambikagiri Raichoudhury",
+    opt4: "Maniram Dewan",
+    correct: "opt2"
+  },
+  {
+    question: "What was the old name of Guwahati?",
+    opt1: "Pragjyotishpur",
+    opt2: "Ratnapur",
+    opt3: "Sonitpur",
+    opt4: "Kamrup",
+    correct: "opt1"
+  },
+  {
+    question: "Which dynasty ruled Kamarupa in 7th century?",
+    opt1: "Palas",
+    opt2: "Ahoms",
+    opt3: "Varmans",
+    opt4: "Chutias",
+    correct: "opt3"
+  },
+  {
+    question: "Who was Bhaskar Varman’s ally?",
+    opt1: "Harsha",
+    opt2: "Ashoka",
+    opt3: "Chandragupta",
+    opt4: "Pulakeshin",
+    correct: "opt1"
+  },
+  {
+    question: "What is the ancient Assamese script called?",
+    opt1: "Brahmi script",
+    opt2: "Kamarupi script",
+    opt3: "Sanskrit script",
+    opt4: "Tirhuta script",
+    correct: "opt2"
+  },
+  {
+    question: "Which temple is linked to Goddess Kamakhya?",
+    opt1: "Hayagriva temple",
+    opt2: "Umananda temple",
+    opt3: "Kamakhya temple",
+    opt4: "Sukreswar temple",
+    correct: "opt3"
+  }
+],
+pokemon : [
     {
-      question: "Who is the Prime Minister of India in 2024?",
-      opt1: "Rahul Gandhi",
-      opt2: "Narendra Modi",
-      opt3: "Amit Shah",
-      opt4: "Yogi Adityanath",
-      correct: "opt2"
+        question: "What is the name of the electric mouse Pokémon that is Ash's main partner?",
+        opt1: "Eevee",
+        opt2: "Pikachu",
+        opt3: "Squirtle",
+        opt4: "Charmander",
+        correct: "opt2",
     },
     {
-      question: "Where was the G20 Summit 2023 hosted?",
-      opt1: "Mumbai",
-      opt2: "New Delhi",
-      opt3: "Bangalore",
-      opt4: "Hyderabad",
-      correct: "opt2"
+        question: "Which type is Bulbasaur primarily?",
+        opt1: "Fire",
+        opt2: "Water",
+        opt3: "Grass",
+        opt4: "Electric",
+        correct: "opt3",
     },
     {
-      question: "Which team won IPL 2024?",
-      opt1: "Mumbai Indians",
-      opt2: "Chennai Super Kings",
-      opt3: "Kolkata Knight Riders",
-      opt4: "Royal Challengers Bangalore",
-      correct: "opt3"
+        question: "Which Pokémon evolves into Charmeleon?",
+        opt1: "Charmander",
+        opt2: "Charizard",
+        opt3: "Cyndaquil",
+        opt4: "Vulpix",
+        correct: "opt1",
     },
     {
-      question: "Where did Chandrayaan-3 land?",
-      opt1: "Moon's North Pole",
-      opt2: "Moon's South Pole",
-      opt3: "Sea of Tranquility",
-      opt4: "Earth Orbit",
-      correct: "opt2"
+        question: "What item is commonly used to catch wild Pokémon?",
+        opt1: "Potion",
+        opt2: "Poké Ball",
+        opt3: "Bicycle",
+        opt4: "TM",
+        correct: "opt2",
     },
     {
-      question: "Ukraine is currently at war with which country?",
-      opt1: "China",
-      opt2: "Japan",
-      opt3: "Russia",
-      opt4: "Germany",
-      correct: "opt3"
+        question: "Which Pokémon is known as the 'Water Turtle' and can shoot water from its mouth?",
+        opt1: "Squirtle",
+        opt2: "Psyduck",
+        opt3: "Jigglypuff",
+        opt4: "Growlithe",
+        correct: "opt1",
     },
     {
-      question: "Who is the President of the USA in 2024?",
-      opt1: "Donald Trump",
-      opt2: "Barack Obama",
-      opt3: "Joe Biden",
-      opt4: "Kamala Harris",
-      correct: "opt3"
+        question: "Which of these is a Normal-type Pokémon that can sing to put opponents to sleep?",
+        opt1: "Jigglypuff",
+        opt2: "Abra",
+        opt3: "Geodude",
+        opt4: "Onix",
+        correct: "opt1",
     },
     {
-      question: "Digital India Mission started in which year?",
-      opt1: "2010",
-      opt2: "2014",
-      opt3: "2015",
-      opt4: "2019",
-      correct: "opt3"
+        question: "What color is the default version of Pikachu?",
+        opt1: "Blue",
+        opt2: "Green",
+        opt3: "Yellow",
+        opt4: "Red",
+        correct: "opt3",
     },
     {
-      question: "What is the currency of Japan?",
-      opt1: "Yuan",
-      opt2: "Yen",
-      opt3: "Won",
-      opt4: "Dollar",
-      correct: "opt2"
+        question: "Which Pokémon is a psychic-type that often holds its head and is known for confusion attacks?",
+        opt1: "Abra",
+        opt2: "Machop",
+        opt3: "Pidgey",
+        opt4: "Ekans",
+        correct: "opt1",
+    },
+    {
+        question: "Which starter Pokémon from the original games is fire-type?",
+        opt1: "Bulbasaur",
+        opt2: "Squirtle",
+        opt3: "Charmander",
+        opt4: "Pikachu",
+        correct: "opt3",
+    },
+    {
+        question: "Which evolution does Eevee NOT directly evolve into in Generation I?",
+        opt1: "Vaporeon",
+        opt2: "Jolteon",
+        opt3: "Flareon",
+        opt4: "Sylveon",
+        correct: "opt4",
     }
   ],
-
-  english: [
-    {
-      question: "What is the plural of 'Child'?",
-      opt1: "Childs",
-      opt2: "Childes",
-      opt3: "Children",
-      opt4: "Childrens",
-      correct: "opt3"
-    },
-    {
-      question: "Which one is a verb?",
-      opt1: "Happy",
-      opt2: "Run",
-      opt3: "Blue",
-      opt4: "Soft",
-      correct: "opt2"
-    },
-    {
-      question: "Fill in the blank: He ___ to school daily.",
-      opt1: "go",
-      opt2: "goes",
-      opt3: "went",
-      opt4: "gone",
-      correct: "opt2"
-    },
-    {
-      question: "Opposite of 'Hot'?",
-      opt1: "Warm",
-      opt2: "Burn",
-      opt3: "Cold",
-      opt4: "Heat",
-      correct: "opt3"
-    },
-    {
-      question: "Synonym of 'Big'?",
-      opt1: "Small",
-      opt2: "Large",
-      opt3: "Short",
-      opt4: "Light",
-      correct: "opt2"
-    },
-    {
-      question: "Correct spelling:",
-      opt1: "Enviroment",
-      opt2: "Environment",
-      opt3: "Environmant",
-      opt4: "Enviranment",
-      correct: "opt2"
-    },
-    {
-      question: "What is a noun?",
-      opt1: "Doing word",
-      opt2: "Describing word",
-      opt3: "Name of a person/place/thing",
-      opt4: "Opposite word",
-      correct: "opt3"
-    },
-    {
-      question: "What is the past form of 'Write'?",
-      opt1: "Writed",
-      opt2: "Written",
-      opt3: "Write",
-      opt4: "Wrote",
-      correct: "opt4"
-    }
-  ]
+  
 };
 
 
 
-// const quizQuestions = [
-//     {
-//         question: "What is the name of the electric mouse Pokémon that is Ash's main partner?",
-//         opt1: "Eevee",
-//         opt2: "Pikachu",
-//         opt3: "Squirtle",
-//         opt4: "Charmander",
-//         correct: "opt2",
-//     },
-//     {
-//         question: "Which type is Bulbasaur primarily?",
-//         opt1: "Fire",
-//         opt2: "Water",
-//         opt3: "Grass",
-//         opt4: "Electric",
-//         correct: "opt3",
-//     },
-//     {
-//         question: "Which Pokémon evolves into Charmeleon?",
-//         opt1: "Charmander",
-//         opt2: "Charizard",
-//         opt3: "Cyndaquil",
-//         opt4: "Vulpix",
-//         correct: "opt1",
-//     },
-//     {
-//         question: "What item is commonly used to catch wild Pokémon?",
-//         opt1: "Potion",
-//         opt2: "Poké Ball",
-//         opt3: "Bicycle",
-//         opt4: "TM",
-//         correct: "opt2",
-//     },
-//     {
-//         question: "Which Pokémon is known as the 'Water Turtle' and can shoot water from its mouth?",
-//         opt1: "Squirtle",
-//         opt2: "Psyduck",
-//         opt3: "Jigglypuff",
-//         opt4: "Growlithe",
-//         correct: "opt1",
-//     },
-//     {
-//         question: "Which of these is a Normal-type Pokémon that can sing to put opponents to sleep?",
-//         opt1: "Jigglypuff",
-//         opt2: "Abra",
-//         opt3: "Geodude",
-//         opt4: "Onix",
-//         correct: "opt1",
-//     },
-//     {
-//         question: "What color is the default version of Pikachu?",
-//         opt1: "Blue",
-//         opt2: "Green",
-//         opt3: "Yellow",
-//         opt4: "Red",
-//         correct: "opt3",
-//     },
-//     {
-//         question: "Which Pokémon is a psychic-type that often holds its head and is known for confusion attacks?",
-//         opt1: "Abra",
-//         opt2: "Machop",
-//         opt3: "Pidgey",
-//         opt4: "Ekans",
-//         correct: "opt1",
-//     },
-//     {
-//         question: "Which starter Pokémon from the original games is fire-type?",
-//         opt1: "Bulbasaur",
-//         opt2: "Squirtle",
-//         opt3: "Charmander",
-//         opt4: "Pikachu",
-//         correct: "opt3",
-//     },
-//     {
-//         question: "Which evolution does Eevee NOT directly evolve into in Generation I?",
-//         opt1: "Vaporeon",
-//         opt2: "Jolteon",
-//         opt3: "Flareon",
-//         opt4: "Sylveon",
-//         correct: "opt4",
-//     },
-// ];
 

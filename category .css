@@ -28,15 +28,17 @@ body {
 }
 
 .box {
-  background: white;
+  background: rgb(236, 235, 235);
+  /* background-image: url(./images/pokemon.jpg); */
   padding: 35px 20px;
   text-align: center;
+  border: 2px solid black;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   text-decoration: none;
   color: #333;
   transition: 0.3s ease;
-  border: 2px solid transparent;
+  /* border: 2px solid transparent; */
 }
 
 .box:hover {
