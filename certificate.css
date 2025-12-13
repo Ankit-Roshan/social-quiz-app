@@ -11,12 +11,14 @@ body {
 
 /* CARD STYLE CERTIFICATE */
 .cert-card {
-    height: 43vh;
+    height: 28vh;
     width: 380px;
     padding: 25px 25px;
     border-radius: 20px;
-    background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, #ffffff 0%, #de7cdf 100%);
+    /* box-shadow: 0 15px 35px rgba(0,0,0,0.15); */
+    box-shadow: 8px -2px 18px 6px rgba(15, 2, 15, 0.3);
+
     text-align: center;
     border: 2px solid #e2e6eb;
     animation: float 3s ease-in-out infinite;
@@ -80,4 +82,10 @@ body {
 .sign-box p, .date-box p {
     font-size: 12px;
     color: #666;
+}
+
+@media screen and (min-width: 600px) {
+   .cert-card {
+    height: 45vh; 
+}
 }
