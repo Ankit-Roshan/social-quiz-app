@@ -50,7 +50,12 @@ body {
     margin: 10px 0 15px;
     color: #938c8c;
 }
-
+#percentValue{
+    color: rgb(161, 151, 151);
+}
+#categoryValue{
+    color: rgb(84, 157, 196);
+}
 .cert-desc {
     font-size: 16px;
     color: #6a6565;
@@ -89,10 +94,4 @@ body {
    .cert-card {
     height: 46vh; 
 }
-}
-#percentValue{
-    color: rgb(161, 151, 151);
-}
-#categoryValue{
-    color: rgb(84, 157, 196);
 }
